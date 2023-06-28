@@ -37,7 +37,8 @@ public class World3 extends Screen
         }
         if(Greenfoot.mouseClicked(n4)){
             Lvl12 lvl4 = new Lvl12();
-            Greenfoot.setWorld(lvl4);
+            Camera c = new Camera(lvl4, 300, 200);
+            Greenfoot.setWorld(c);
         }
         if(Greenfoot.mouseClicked(r)){
             SubWorlds worldmenu = new SubWorlds();
