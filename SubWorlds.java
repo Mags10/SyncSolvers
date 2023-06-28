@@ -14,6 +14,8 @@ public class SubWorlds extends Screen
     
     public SubWorlds()
     {
+        GreenfootImage img = new GreenfootImage("Background-4.png");
+        setBackground(img);
         addObject(b1,150,300);
         addObject(b2,150,200);
         addObject(b3,150,100);
