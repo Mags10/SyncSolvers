@@ -16,7 +16,7 @@ public class Lvl12 extends Level
     public Lvl12()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super();
+        super(2000, 1200);
         prepare();
         
     }
@@ -89,9 +89,26 @@ public class Lvl12 extends Level
         addObject(wall4,1641,709);
         wall4.setLocation(1648,651);
 
-        
         ground16.setLocation(1455,864);
         ground16.setLocation(1528,835);
-        super.setCamera(player);
+
+        Ground ground17 = new Ground(30);
+        addObject(ground17,440,221);
+        ground17.setLocation(430,229);
+
+        Player player2 = new Player();
+        addObject(player2,383,210);
+        Player player3 = new Player();
+        addObject(player3,619,196);
+        Player player4 = new Player();
+        addObject(player4,507,240);
+        Player player5 = new Player();
+        addObject(player5,771,231);
+        Player player6 = new Player();
+        addObject(player6,893,233);
+        Player player7 = new Player();
+        addObject(player7,1137,241);
+        Player player8 = new Player();
+        addObject(player8,1041,402);
     }
 }

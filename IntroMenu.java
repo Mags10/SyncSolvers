@@ -9,18 +9,20 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class IntroMenu extends World
 {
     PlayButton pb = new PlayButton();
-   public IntroMenu(){
-       
-         
-       super(600, 400, 1); 
+    ButtonPlay play = new ButtonPlay();
+    
+    public IntroMenu(){  
+       super(600, 400, 1);
+       GreenfootImage img = new GreenfootImage("Background-4.png");
+       setBackground(img);
        prepare();
-        
     }
     private void prepare()
     {
         Planeta p = new Planeta();
-        addObject(p,283,206);        
-        addObject(pb,283,206);
+        addObject(p,210,206);        
+        addObject(pb,477,250);
+        addObject(play,477,180);
        
     }
     public void act(){

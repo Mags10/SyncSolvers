@@ -24,6 +24,12 @@ public class Level extends World
      * 
      */
     
+    public Level()
+    {    
+        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        super(600, 400, 1);
+    }
+    
     public Level(int width, int height)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.

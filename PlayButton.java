@@ -9,9 +9,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class PlayButton extends Button
 {
     public PlayButton(){
-        GreenfootImage imagen = getImage(); // Obtiene la imagen original
-        int nuevoAncho = imagen.getWidth() / 5; // Doble del ancho original
-        int nuevoAlto = imagen.getHeight() / 5; // Doble de la altura original
+        GreenfootImage imagen = new GreenfootImage("boton-de-play.png"); // Obtiene la imagen original
+        int nuevoAncho = imagen.getWidth() / 8; // Doble del ancho original
+        int nuevoAlto = imagen.getHeight() / 8; // Doble de la altura original
         imagen.scale(nuevoAncho, nuevoAlto); // Escala la imagen al nuevo tamaño
         setImage(imagen);    
     }

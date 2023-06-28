@@ -29,7 +29,7 @@ private GreenfootImage[] imagenes;  // Variable para almacenar las imágenes
 
     public void act() {
         try {
-            Thread.sleep(400); // Espera .9 segundos (900 milisegundos)
+            Thread.sleep(200); // Espera .9 segundos (900 milisegundos)
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
