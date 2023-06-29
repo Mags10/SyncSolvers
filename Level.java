@@ -38,7 +38,8 @@ public class Level extends World
     }
     
     Sprite[] backgrounds = new Sprite[6];
-    int[] movementFactorsX = {500, 700, 900, 1100, 1300, 1500};
+    //int[] movementFactorsX = {500, 700, 900, 1100, 1300, 1500};
+    int[] movementFactorsX = {1500, 1300, 1100, 900, 700, 500};
     int[] movementFactorsY = {100, 200, 300, 400, 500, 600};
     
     private void addBackground(){
