@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=FollowerCam
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Sprite\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=e\ dx\ dy
+comment1.target=FollowerCam(Entity,\ int,\ int)
+comment2.params=stepSize\ max
+comment2.target=void\ modifyCameraXOfset(int,\ int)
+comment3.params=stepSize\ max
+comment3.target=void\ modifyCameraYOfset(int,\ int)
+comment4.params=XstepSize\ YstepSize
+comment4.target=void\ goToOriginalOfsetByStep(int,\ int)
+comment5.params=
+comment5.target=void\ goToOriginalOfset()
+comment6.params=
+comment6.target=void\ act()
+numComments=7

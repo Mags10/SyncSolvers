@@ -1,6 +1,7 @@
 import greenfoot.*;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Timer;
 
 public class Player extends Entity {
     private static final int horizontalSpeed = 5;
@@ -11,16 +12,17 @@ public class Player extends Entity {
     private boolean jump = false;
     private boolean toLeft = false;
     private boolean inGround = false;
-    private Sprite camCtrl;
+    private FollowerCam camCtrl;
     private boolean isDrawed = false;
     private boolean isSelected = false;
-    private int canChangeCamera = 20;
+    private int canChangeCamera = 10;
     private int contChangeCamera = 0;
+    private Sprite indicator;
     
     Player(){
         super(new GreenfootImage("Capa 4.png"), 20, 1, true);
-        this.camCtrl = new Sprite(new GreenfootImage(10,10), this, 1, 80, -80);
-        //this.getWorld().addObject(this.camCtrl, 0, 0);
+        this.camCtrl = new FollowerCam(this, 80, -80);
+        this.indicator = new Sprite(new GreenfootImage("indicatorPlayer.png"), this, 0.7);
     }
 
     public void act() {
@@ -28,6 +30,8 @@ public class Player extends Entity {
             this.drawFollower();
             if(((Level)this.getWorld()).getCamera() == null){
                 this.isSelected = true;
+                this.getWorld().addObject(this.indicator, 0, 0);
+                this.indicator.setOffset(0, -30);
                 initializeCamera();
             }
             isDrawed = true;
@@ -36,6 +40,7 @@ public class Player extends Entity {
         applyGravity();
         if(this.isSelected) checkJump();
         if(this.isSelected) handleMovement();
+        if(this.isSelected) handleIndicator();
         handleCollision();
         handleFollower();
         contChangeCamera++;
@@ -161,7 +166,7 @@ public class Player extends Entity {
     private int stepAnim = 6;
     private int currentStepAnim = 0;
     
-    public void changeSprite(){
+    private void changeSprite(){
         if(verticalSpeed == 0){
             currentStepAnim++;
             if(currentStepAnim >= stepAnim){
@@ -183,7 +188,7 @@ public class Player extends Entity {
     private boolean framekey = false;
     private boolean band = false;
     
-    public void fallingSprite(){
+    private void fallingSprite(){
         if(verticalSpeed != 0){
             GreenfootImage img = new GreenfootImage("Capa 13.png");
             if(toLeft) img.mirrorHorizontally();
@@ -208,18 +213,14 @@ public class Player extends Entity {
         }
     }
     
-    public void drawFollower(){
+    private void drawFollower(){
         this.getWorld().addObject(this.camCtrl, 0, 0);
-    }
-    
-    public Actor getFollower(){
-        return this.camCtrl;
     }
     
     private int maxOffset = 25;
     private int StepOfset = 2;
     
-    public void handleFollower(){
+    private void handleFollower(){
         if (Greenfoot.isKeyDown("left")) {
             this.camCtrl.modifyCameraXOfset(StepOfset, maxOffset);
         }else if (Greenfoot.isKeyDown("right")) {
@@ -237,18 +238,41 @@ public class Player extends Entity {
     }
     
     public void changeToPlayer(Player p){
-        this.camCtrl.goTo(p.getCameraObjective());
+        Timer timer = new Timer();
         this.isSelected = false;
+        this.getWorld().removeObject(this.indicator);
         p.setSelected(true);
         p.initializeCamera();
+        this.camCtrl.goToOriginalOfset();
     }
     
     public void setSelected(boolean selected){
         this.isSelected = selected;
+        this.getWorld().addObject(this.indicator, 0, 0);
+        this.indicator.setOffset(0, -30);
     }
     
-    public Sprite getCameraObjective(){
+    public FollowerCam getCameraObjective(){
         return this.camCtrl;
+    }
+    
+    public boolean cameraInitialized(){
+        return this.isDrawed;
+    }
+    
+    private boolean keyFrameIndicator = false;
+    private int contFrameIndicator = 0;
+    
+    private void handleIndicator(){
+        if(contFrameIndicator >= 10){
+            if(this.keyFrameIndicator)
+                this.indicator.setOffset(0, -32);
+            else
+                this.indicator.setOffset(0, -30);
+            this.keyFrameIndicator = !this.keyFrameIndicator;
+            contFrameIndicator = 0;
+        }
+        contFrameIndicator++;
     }
     
 }
