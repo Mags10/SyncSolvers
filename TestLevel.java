@@ -14,8 +14,7 @@ public class TestLevel extends Level
      * 
      */
     public TestLevel()
-    {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+    {   
         super(2000, 1200);
         prepare();
         
@@ -28,6 +27,8 @@ public class TestLevel extends Level
      */
     private void prepare()
     {
+        GreenfootImage img = new GreenfootImage("WP1.jpg");
+        setBackground(img);
         GreenfootImage temp = new GreenfootImage(getBackground().getWidth(), getBackground().getWidth());
         temp.setColor(greenfoot.Color.GRAY);
         temp.fill();

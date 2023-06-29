@@ -16,6 +16,8 @@ public class World3 extends Screen
     
     public World3()
     {
+        GreenfootImage img = new GreenfootImage("Background-4.png");
+        setBackground(img);
         addObject(n1,120,50);
         addObject(n2,240,150);
         addObject(n3,360,250);
@@ -25,15 +27,18 @@ public class World3 extends Screen
     public void act(){
         if(Greenfoot.mouseClicked(n1)){
             Lvl9 lvl1 = new Lvl9();
-            Greenfoot.setWorld(lvl1);
+            Camera c = new Camera(lvl1, 300, 200);
+            Greenfoot.setWorld(c);
         }
         if(Greenfoot.mouseClicked(n2)){
             Lvl10 lvl2 = new Lvl10();
-            Greenfoot.setWorld(lvl2);
+            Camera c = new Camera(lvl2, 300, 200);
+            Greenfoot.setWorld(c);
         }
         if(Greenfoot.mouseClicked(n3)){
             Lvl11 lvl3 = new Lvl11();
-            Greenfoot.setWorld(lvl3);
+            Camera c = new Camera(lvl3, 300, 200);
+            Greenfoot.setWorld(c);
         }
         if(Greenfoot.mouseClicked(n4)){
             Lvl12 lvl4 = new Lvl12();
