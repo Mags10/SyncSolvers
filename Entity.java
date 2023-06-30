@@ -9,6 +9,12 @@ public class Entity extends Actor {
     private Sprite texture;
     private boolean isDrawed = false;
 
+    public Entity() {
+        this.width = 1;
+        this.height = 1;
+        drawEntity();
+    }
+    
     public Entity(GreenfootImage img, int widthOfHitbox, double scale, boolean ShowHitbox) {
         this.ShowHitBox = ShowHitbox;
         double tmp = (double)img.getHeight() / (double)img.getWidth(); 

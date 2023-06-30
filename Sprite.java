@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Sprite extends Actor
 {
     private Entity asoc = null;
+    private Actor asocActor = null;
     private double scale = 1;
     private boolean fixedToButton = true;
     private GreenfootImage imgLocal;
@@ -20,7 +21,22 @@ public class Sprite extends Actor
         this.imgLocal = img;
         this.scale = e.getHeight() / img.getHeight() + scale;
         img.scale(((int)((double)e.getWidth() * scale)), ((int)((double)e.getHeight() * scale)));
-        //img.scale(((int)((double)img.getWidth() * scale)), ((int)((double)img.getHeight() * scale)));
+        setImage(img);
+    }
+    
+    Sprite(GreenfootImage img, Entity e, double scale, boolean notScaleToEntity){
+        this.asoc = e;
+        this.scale = scale;
+        this.imgLocal = img;
+        img.scale(((int)((double)img.getWidth() * scale)), ((int)((double)img.getHeight() * scale)));
+        setImage(img);
+    }
+    
+    Sprite(GreenfootImage img, Actor e, double scale){
+        this.asocActor = e;
+        this.scale = scale;
+        this.imgLocal = img;
+        img.scale(((int)((double)img.getWidth() * scale)), ((int)((double)img.getHeight() * scale)));
         setImage(img);
     }
     
@@ -49,16 +65,28 @@ public class Sprite extends Actor
         setLocation(this.getX() + this.dx, this.getY() + this.dy);
     }
     
+    public void changeEntityObjetive(Entity e){
+        this.asoc = e;
+    }
+    
+    public void changeActorObjetive(Actor e){
+        this.asocActor = e;
+    }
+    
     public void act()
     {
         // Add your action code here.
-        if(this.asoc != null)
+        if(this.asoc != null){
             if(this.fixedToButton){
                 setLocation(this.asoc.getX() + this.dx, this.asoc.getBotton() - this.imgLocal.getHeight() / 2 + this.dy);
             }else{
                 setLocation(this.asoc.getX() + this.dx, this.asoc.getY() + this.dy);
             }
-        
+        }
+        if(this.asocActor != null){
+            setLocation(this.asocActor.getX() + this.dx, this.asocActor.getY() + this.dy);
+        }
+            
     }
     
 }

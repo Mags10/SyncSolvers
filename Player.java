@@ -19,10 +19,15 @@ public class Player extends Entity {
     private int contChangeCamera = 0;
     private Sprite indicator;
     
+    private Sprite[] itemIndicators;
+    
+    
     Player(){
         super(new GreenfootImage("Capa 4.png"), 20, 1, true);
         this.camCtrl = new FollowerCam(this, 80, -80);
         this.indicator = new Sprite(new GreenfootImage("indicatorPlayer.png"), this, 0.7);
+        
+        
     }
 
     public void act() {
@@ -243,12 +248,14 @@ public class Player extends Entity {
         this.getWorld().removeObject(this.indicator);
         p.setSelected(true);
         p.initializeCamera();
+        ((Level)this.getWorld()).drawLife(((Level)this.getWorld()).getCamera().getCameraActor());
         this.camCtrl.goToOriginalOfset();
     }
     
     public void setSelected(boolean selected){
         this.isSelected = selected;
         this.getWorld().addObject(this.indicator, 0, 0);
+        
         this.indicator.setOffset(0, -30);
     }
     
