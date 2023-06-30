@@ -18,6 +18,7 @@ public class Level extends World
     private int indexCurrentPlayer = -1;
     private Player currentPlayer;
     private boolean seted = true;
+    private Sprite lifeIndicator;
     
     /**
      * Constructor for objects of class Level.
@@ -34,7 +35,15 @@ public class Level extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(width, height, 1);
-        this.addBackground();
+        this.addBackground(2);
+        
+    }
+    
+    public Level(int width, int height, int bg)
+    {    
+        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        super(width, height, 1);
+        this.addBackground(bg);
     }
     
     Sprite[] backgrounds = new Sprite[6];
@@ -42,12 +51,14 @@ public class Level extends World
     int[] movementFactorsX = {1500, 1300, 1100, 900, 700, 500};
     int[] movementFactorsY = {100, 200, 300, 400, 500, 600};
     
-    private void addBackground(){
+    private void addBackground(int bg){
         for(int i = -6; i < 0; i++){
-            backgrounds[i + 6] = new Sprite(new GreenfootImage(i + ".png"), this.getWidth(), this.getHeight());
+            backgrounds[i + 6] = new Sprite(new GreenfootImage(bg + "" + i + ".png"), this.getWidth(), this.getHeight());
             addObject(backgrounds[i + 6], this.getWidth()/2, this.getHeight()/2);            
         }
     }
+    
+    private boolean isCameraSeted = false;
     
     public void act(){
         int movx = 0;
@@ -61,6 +72,11 @@ public class Level extends World
             seted = false;
         }
         if(currentPlayer.cameraInitialized()){
+            if(!isCameraSeted){
+                this.drawLife(this.camera.getCameraActor());
+                setCamera(currentPlayer.getCameraObjective());
+                isCameraSeted = true;
+            }
             double relx = ((double)currentPlayer.getCameraObjective().getX() / (double)this.getWidth());
             double rely = ((double)currentPlayer.getCameraObjective().getY() / (double)this.getHeight());
             for(int i = 0; i < backgrounds.length; i++){
@@ -69,6 +85,34 @@ public class Level extends World
                 backgrounds[i].setLocation(movx, movy);
             }
         }
+        
+        if(Greenfoot.isKeyDown("g")){
+            updateLife(-1);
+        }
+        if(Greenfoot.isKeyDown("h")){
+            updateLife(1);
+        }
+        
+    }
+    
+    public void drawLife(Actor a){
+        if(this.lifeIndicator != null){
+            this.lifeIndicator.changeActorObjetive(a);
+        }else{
+            this.lifeIndicator = new Sprite(new GreenfootImage("l0" + this.life + ".png"), a, 3);
+            addObject(this.lifeIndicator, 0, 0);
+            this.lifeIndicator.setOffset(-230, 185);
+        }   
+    }
+    
+    private int life = 5;
+    private int maxLife = 5;
+    
+    public void updateLife(int val){
+        life += val;
+        if(life >= maxLife) life = maxLife;
+        if(life < 1) life = 1;
+        this.lifeIndicator.updateSprite(new GreenfootImage("l0" + this.life + ".png"));
     }
     
     public void setCamera(Actor a){

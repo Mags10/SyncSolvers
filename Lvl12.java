@@ -18,7 +18,6 @@ public class Lvl12 extends Level
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(2000, 1200);
         prepare();
-        
     }
     
     /**
@@ -34,5 +33,7 @@ public class Lvl12 extends Level
             Ground ground = new Ground(1900);
             addObject(ground,1000,i);
         }
+        
     }
+    
 }

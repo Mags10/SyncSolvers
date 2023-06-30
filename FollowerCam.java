@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class FollowerCam extends Actor
+public class FollowerCam extends Entity
 {
     private Entity asoc;
     private boolean isDrawed = false;
