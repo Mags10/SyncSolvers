@@ -11,7 +11,7 @@ public class SubWorlds extends Screen
     MenuMedio b2 = new MenuMedio();
     MenuFacil b3 = new MenuFacil();
     Regresar r = new Regresar();
-    
+    private GreenfootSound bkgMusic;
     public SubWorlds()
     {
         GreenfootImage img = new GreenfootImage("Background-4.png");
@@ -40,6 +40,12 @@ public class SubWorlds extends Screen
         if(Greenfoot.mouseClicked(r)){
             IntroMenu worldmenu = new IntroMenu();
             Greenfoot.setWorld(worldmenu);
+        }
+        if(Greenfoot.mouseClicked(m)){
+            bkgMusic.stop();
+        }
+        if(Greenfoot.mouseClicked(um)){
+            bkgMusic.playLoop();
         }
     }
 }

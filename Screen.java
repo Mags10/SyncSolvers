@@ -8,7 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Screen extends World
 {
-
+    Mute m = new Mute();
+    Unmute um = new Unmute();
     /**
      * Constructor for objects of class Screen.
      * 
