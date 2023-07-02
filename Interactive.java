@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Interactive extends Block
+public class Interactive extends Scenary
 {
     Interactive() {
         super(50,50);

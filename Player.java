@@ -134,10 +134,10 @@ public class Player extends Entity {
                 }else{
                     toLeft = true;
                 }
-                if(this.getRight() > wlBlock.getLeft() && !toLeft){
+                if(this.getRight() > wlBlock.getLeft() && !toLeft && ((Wall)wlBlock).isLeftColition()){
                     this.setRight(wlBlock.getLeft());
                 }
-                if(this.getLeft() < wlBlock.getRight() && toLeft){
+                if(this.getLeft() < wlBlock.getRight() && toLeft && !((Wall)wlBlock).isLeftColition()){
                     this.setLeft(wlBlock.getRight());
                 }
         }

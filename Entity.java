@@ -5,7 +5,7 @@ public class Entity extends Actor {
     private int width;
     private int height;
     private Color HitBoxColor = new Color(255,0,0,0);
-    private boolean ShowHitBox = false;
+    private boolean ShowHitBox = true;
     private Sprite texture;
     private boolean isDrawed = false;
 

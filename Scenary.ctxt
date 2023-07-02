@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Scenary
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Scenary\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=width\ height
+comment1.target=Scenary(int,\ int)
+comment2.params=width
+comment2.target=Scenary(int)
+comment3.params=
+comment3.target=void\ act()
+numComments=4

@@ -59,7 +59,7 @@ public class Level extends World
             addObject(backgrounds[i + 6], this.getWidth()/2, this.getHeight()/2);            
         }
         if(this.scenary != null){
-            addObject(this.scenary, 996, 607);  
+            addObject(this.scenary, 996, 600);  
         }
     }
     
