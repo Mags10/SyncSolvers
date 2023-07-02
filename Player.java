@@ -48,6 +48,7 @@ public class Player extends Entity {
         if(this.isSelected) handleIndicator();
         handleCollision();
         handleFollower();
+        handleDamage();
         contChangeCamera++;
     }
     
@@ -137,6 +138,7 @@ public class Player extends Entity {
             verticalSpeed = -maxJumpHeight;
             this.camCtrl.enableShake();
             this.isDamaged = true;
+            this.indicator.updateSprite(new GreenfootImage("indicatorPlayerDamage.png"), 1);
             //((Level)this.getWorld()).update
         }
 
@@ -187,12 +189,6 @@ public class Player extends Entity {
     private int stepAnim = 6;
     private int currentStepAnim = 0;
     
-    private int countDamage = 50;
-    private int stepDamage = 0;
-    private int numFlashes = 5;
-    private double currentTransparency = 1;
-    private boolean countUp = false;
-    
     private void changeSprite(){
         if(verticalSpeed == 0){
             currentStepAnim++;
@@ -207,12 +203,22 @@ public class Player extends Entity {
                 if(!toLeft) countAnim--;
             }
         }
+        
+    }
+    
+    private int countDamage = 100;
+    private int stepDamage = 0;
+    private int numFlashes = 5;
+    private double currentTransparency = 1;
+    private boolean countUp = false;
+    
+    private void handleDamage(){
         if(isDamaged){
             stepDamage++;
             if(countUp)
-                currentTransparency += (1/countDamage) * numFlashes;
+                currentTransparency += .1;
             else
-                currentTransparency -= (1/countDamage) * numFlashes;
+                currentTransparency -= .1;
             if(currentTransparency < 0){
                 currentTransparency = 0;
                 countUp = true;
@@ -221,10 +227,11 @@ public class Player extends Entity {
                 currentTransparency = 1;
                 countUp = false;
             }
-            super.getTexture().setTransparency(currentTransparency);
+            super.getTexture().setTransparency((int)(currentTransparency * 255));
             if(stepDamage >= countDamage){
                 isDamaged = false;
                 stepDamage = 0;
+                this.indicator.updateSprite(new GreenfootImage("indicatorPlayer.png"), 1);
             }
         }
     }

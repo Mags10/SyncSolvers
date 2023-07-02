@@ -55,6 +55,12 @@ public class Sprite extends Actor
     
     public void updateSprite(GreenfootImage img){
         this.imgLocal = img;
+        img.scale(((int)((double)img.getWidth() * this.scale)), ((int)((double)img.getHeight() * this.scale)));
+        setImage(img);
+    }
+    
+    public void updateSprite(GreenfootImage img, double scale){
+        this.imgLocal = img;
         img.scale(((int)((double)img.getWidth() * scale)), ((int)((double)img.getHeight() * scale)));
         setImage(img);
     }
@@ -73,8 +79,10 @@ public class Sprite extends Actor
         this.asocActor = e;
     }
     
-    public void setTransparency(double value){
-        this.imgLocal.setTransparency((int)(value * 255));
+    public void setTransparency(int value){
+        this.imgLocal.setTransparency(value);
+        System.out.println(value);
+        System.out.println(this.imgLocal.getTransparency());
         this.setImage(this.imgLocal);
     }
     
