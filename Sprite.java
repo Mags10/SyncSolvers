@@ -81,8 +81,6 @@ public class Sprite extends Actor
     
     public void setTransparency(int value){
         this.imgLocal.setTransparency(value);
-        System.out.println(value);
-        System.out.println(this.imgLocal.getTransparency());
         this.setImage(this.imgLocal);
     }
     

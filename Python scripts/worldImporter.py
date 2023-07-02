@@ -48,7 +48,7 @@ def exportColitionsMap(jsonPath, exportPath):
                 elif(val != 0):
                     ini = j
                     for k in range(j, col+1):
-                        if(values[i*col+k] == 0 or k == col-1):
+                        if(values[i*col+k] == 0 or k == col):
                             fin = k
                             break
                     #print("fin({})-ini({}): {}".format(fin, ini, fin-ini))

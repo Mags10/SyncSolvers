@@ -65,6 +65,7 @@ public class Player extends Entity {
     private void applyGravity() {
         if (!inGround) {
             verticalSpeed += gravity;
+            if(verticalSpeed >= 15) verticalSpeed = 15;
             fallingSprite();
         }
         
@@ -139,7 +140,7 @@ public class Player extends Entity {
             this.camCtrl.enableShake();
             this.isDamaged = true;
             this.indicator.updateSprite(new GreenfootImage("indicatorPlayerDamage.png"), 1);
-            //((Level)this.getWorld()).update
+            ((Level)this.getWorld()).updateLife(-1);
         }
 
         
@@ -233,6 +234,8 @@ public class Player extends Entity {
                 stepDamage = 0;
                 this.indicator.updateSprite(new GreenfootImage("indicatorPlayer.png"), 1);
             }
+            if(stepDamage == countDamage/2)
+                this.indicator.updateSprite(new GreenfootImage("indicatorPlayerMedium.png"), 1);
         }
     }
     

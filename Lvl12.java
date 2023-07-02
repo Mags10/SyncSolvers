@@ -51,8 +51,8 @@ block = new Block(1848, 24);
 addObject(block, 924, 252);
 block = new Block(240, 24);
 addObject(block, 1320, 348);
-block = new Block(120, 24);
-addObject(block, 1908, 348);
+block = new Block(144, 24);
+addObject(block, 1920, 348);
 block = new Block(192, 24);
 addObject(block, 1536, 396);
 block = new Block(552, 24);
@@ -69,8 +69,8 @@ block = new Block(432, 24);
 addObject(block, 360, 516);
 block = new Block(528, 24);
 addObject(block, 912, 516);
-block = new Block(1872, 24);
-addObject(block, 1032, 612);
+block = new Block(1896, 24);
+addObject(block, 1044, 612);
 block = new Block(192, 24);
 addObject(block, 840, 780);
 block = new Block(264, 24);
@@ -85,8 +85,8 @@ block = new Block(144, 24);
 addObject(block, 1176, 924);
 block = new Block(48, 24);
 addObject(block, 1632, 924);
-block = new Block(1968, 24);
-addObject(block, 984, 996);
+block = new Block(1992, 24);
+addObject(block, 996, 996);
 Obstacle peak = new Obstacle();
 addObject(peak, 276, 108);
 peak = new Obstacle();
@@ -585,6 +585,7 @@ peak = new Obstacle();
 addObject(peak, 1692, 972);
 peak = new Obstacle();
 addObject(peak, 1716, 972);
+
 
 
     }
