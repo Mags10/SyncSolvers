@@ -16,6 +16,7 @@ public class FollowerCam extends Entity
     private int orgdx = 0;
     private int dy = 0;
     private int orgdy = 0;
+    private boolean shakeEnabled = false;
     
     FollowerCam(Entity e, int dx, int dy){
         this.orgdx = this.dx = dx;
@@ -63,9 +64,26 @@ public class FollowerCam extends Entity
         this.dy = this.orgdy;
     }
     
+    private int cont = 0;
+    
+    public void enableShake(){
+        shakeEnabled = true;
+    }
+    
     public void act()
     {
         int x, y;
+        if (shakeEnabled) {
+            cont++;
+            int shakeOffsetX = Greenfoot.getRandomNumber(11) - 5;
+            int shakeOffsetY = Greenfoot.getRandomNumber(11) - 5;
+            dx += shakeOffsetX;
+            dy += shakeOffsetY;
+            if(cont >= 50) {
+                shakeEnabled = false;
+                cont = 0;
+            }
+        }
         x = this.asoc.getX() + this.dx;
         y = this.asoc.getY() + this.dy;
         if(this.asoc.getX() + this.dx - 300 <= 0){
@@ -82,6 +100,9 @@ public class FollowerCam extends Entity
         }
         setLocation(x, y);
         //setLocation(this.asoc.getX() + this.dx, this.asoc.getY() + this.dy);
+        
+        
+        
     }
     
 }

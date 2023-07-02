@@ -116,6 +116,8 @@ public class Player extends Entity {
         setLocation(getX() + dx, getY());
     }
     
+    private boolean isDamaged = false;
+    
     private void handleCollision() {
         if (jump && jumpCont > 0) {
             jumpCont--;
@@ -124,6 +126,20 @@ public class Player extends Entity {
         if (jumpCont == 0) {
             jump = false;
         }
+        
+        Entity obBlock = (Entity) getOneIntersectingObject(Obstacle.class);
+    
+        if (obBlock != null && !isDamaged) {
+            // Colisión con paredes (horizontal)
+            jumpCont = maxJumpHeight;
+            jump = true;
+            inGround = false;
+            verticalSpeed = -maxJumpHeight;
+            this.camCtrl.enableShake();
+            this.isDamaged = true;
+            //((Level)this.getWorld()).update
+        }
+
         
         Entity wlBlock = (Entity) getOneIntersectingObject(Wall.class);
     
@@ -171,6 +187,12 @@ public class Player extends Entity {
     private int stepAnim = 6;
     private int currentStepAnim = 0;
     
+    private int countDamage = 50;
+    private int stepDamage = 0;
+    private int numFlashes = 5;
+    private double currentTransparency = 1;
+    private boolean countUp = false;
+    
     private void changeSprite(){
         if(verticalSpeed == 0){
             currentStepAnim++;
@@ -183,6 +205,26 @@ public class Player extends Entity {
                 super.getTexture().updateSprite(img);
                 if(toLeft) countAnim++;
                 if(!toLeft) countAnim--;
+            }
+        }
+        if(isDamaged){
+            stepDamage++;
+            if(countUp)
+                currentTransparency += (1/countDamage) * numFlashes;
+            else
+                currentTransparency -= (1/countDamage) * numFlashes;
+            if(currentTransparency < 0){
+                currentTransparency = 0;
+                countUp = true;
+            }
+            if(currentTransparency > 1){
+                currentTransparency = 1;
+                countUp = false;
+            }
+            super.getTexture().setTransparency(currentTransparency);
+            if(stepDamage >= countDamage){
+                isDamaged = false;
+                stepDamage = 0;
             }
         }
     }

@@ -73,6 +73,11 @@ public class Sprite extends Actor
         this.asocActor = e;
     }
     
+    public void setTransparency(double value){
+        this.imgLocal.setTransparency((int)(value * 255));
+        this.setImage(this.imgLocal);
+    }
+    
     public void act()
     {
         // Add your action code here.
