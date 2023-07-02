@@ -23,7 +23,7 @@ public class Player extends Entity {
     
     
     Player(){
-        super(new GreenfootImage("Capa 4.png"), 20, 1, true);
+        super(new GreenfootImage("Capa 4.png"), 20, 1, false);
         this.camCtrl = new FollowerCam(this, 80, -80);
         this.indicator = new Sprite(new GreenfootImage("indicatorPlayer.png"), this, 0.7);
         

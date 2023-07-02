@@ -9,11 +9,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Wall extends Block
 {
     Wall(int longitude) {
-        super(20, longitude);
+        super(15, longitude);
     }
     
     Wall() {
-        super(20, 200);
+        super(15, 200);
     }
     /**
      * Act - do whatever the Wall wants to do. This method is called whenever

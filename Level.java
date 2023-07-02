@@ -19,6 +19,7 @@ public class Level extends World
     private Player currentPlayer;
     private boolean seted = true;
     private Sprite lifeIndicator;
+    private Sprite scenary;
     
     /**
      * Constructor for objects of class Level.
@@ -35,14 +36,15 @@ public class Level extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(width, height, 1);
-        this.addBackground(2);
+        this.addBackground(1);
         
     }
     
-    public Level(int width, int height, int bg)
+    public Level(int width, int height, int bg, GreenfootImage img)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(width, height, 1);
+        this.scenary = new Sprite(img, 1);
         this.addBackground(bg);
     }
     
@@ -55,6 +57,9 @@ public class Level extends World
         for(int i = -6; i < 0; i++){
             backgrounds[i + 6] = new Sprite(new GreenfootImage(bg + "" + i + ".png"), this.getWidth(), this.getHeight());
             addObject(backgrounds[i + 6], this.getWidth()/2, this.getHeight()/2);            
+        }
+        if(this.scenary != null){
+            addObject(this.scenary, 996, 607);  
         }
     }
     

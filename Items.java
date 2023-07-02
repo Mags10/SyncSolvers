@@ -8,15 +8,20 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Items extends Entity
 {
+    private Sprite texture;
+    private boolean drawed = false;
     /**
      * Act - do whatever the Items wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    public Items(String textInitial) {
+        super(new GreenfootImage(textInitial), 15, 1, true);
+    }
     public Items() {
-        super(10, 10);
+        super(15, 15);
     }
     public void act()
     {
-        // Add your action code here.
+        
     }
 }
