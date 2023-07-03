@@ -13,7 +13,8 @@ public class DeathScreen extends Screen
      * Constructor for objects of class DeathScreen.
      * 
      */
-    public DeathScreen()
-    {
+    public DeathScreen(Level tmp, int dificulty)
+    {   
+        
     }
 }
