@@ -11,8 +11,6 @@ public class SubWorlds extends Screen
     MenuMedio b2 = new MenuMedio();
     MenuFacil b3 = new MenuFacil();
     Regresar r = new Regresar();
-    
-    
     public SubWorlds()
     {
         GreenfootImage img = new GreenfootImage("Background-4.png");
@@ -20,11 +18,9 @@ public class SubWorlds extends Screen
         addObject(b1,150,300);
         addObject(b2,150,200);
         addObject(b3,150,100);
-
         Button t = new TituloJuego();
         addObject(t,439,200);
         addObject(r, 550, 50);
-            
     }
     public void act(){
         if(Greenfoot.mouseClicked(b3)){
