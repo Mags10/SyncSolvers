@@ -13,9 +13,9 @@ public class Lvl3 extends Level
      * Constructor for objects of class Lvl3.
      * 
      */
-    public Lvl3()
+    public Lvl3(int d)
     {
-        super(2000, 1200, 1, new GreenfootImage("Map004.png"));
+        super(2000, 1200, 1, new GreenfootImage("Map004.png"), d);
         prepare();
     }
     private void prepare(){

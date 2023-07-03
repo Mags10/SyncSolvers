@@ -26,22 +26,22 @@ public class World1 extends Screen
     }
     public void act(){
         if(Greenfoot.mouseClicked(n1)){
-            Lvl1 lvl1 = new Lvl1();
+            Lvl1 lvl1 = new Lvl1(1);
             Camera c = new Camera(lvl1, 300, 200);
             Greenfoot.setWorld(c);
         }
         if(Greenfoot.mouseClicked(n2)){
-            Lvl2 lvl2 = new Lvl2();
+            Lvl2 lvl2 = new Lvl2(1);
             Camera c = new Camera(lvl2, 300, 200);
             Greenfoot.setWorld(c);
         }
         if(Greenfoot.mouseClicked(n3)){
-            Lvl3 lvl3 = new Lvl3();
+            Lvl3 lvl3 = new Lvl3(1);
             Camera c = new Camera(lvl3, 300, 200);
             Greenfoot.setWorld(c);
         }
         if(Greenfoot.mouseClicked(n4)){
-            Lvl4 lvl4 = new Lvl4();
+            Lvl4 lvl4 = new Lvl4(1);
             Camera c = new Camera(lvl4, 300, 200);
             Greenfoot.setWorld(c);
         }

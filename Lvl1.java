@@ -13,10 +13,12 @@ public class Lvl1 extends Level
      * Constructor for objects of class Lvl1.
      * 
      */
-    public Lvl1()
+    public Lvl1(int d)
     {
-    super(2000, 1200, 1, new GreenfootImage("Map002.png"));
-        prepare();
+    super(2000, 1200, 1, new GreenfootImage("Map002.png"), d);
+    
+    prepare();
+        
         
     }
     

@@ -13,10 +13,10 @@ public class Lvl2 extends Level
      * Constructor for objects of class Lvl2.
      * 
      */
-    public Lvl2()
+    public Lvl2(int d)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(2000, 1200, 1, new GreenfootImage("Map003.png"));
+        super(2000, 1200, 1, new GreenfootImage("Map003.png"), d);
         prepare();
     }
     

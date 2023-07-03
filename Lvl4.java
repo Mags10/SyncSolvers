@@ -13,9 +13,9 @@ public class Lvl4 extends Level
      * Constructor for objects of class Lvl4.
      * 
      */
-    public Lvl4()
+    public Lvl4(int d)
     {
-        super(2000, 1200, 1, new GreenfootImage("Map005.png"));
+        super(2000, 1200, 1, new GreenfootImage("Map005.png"), d);
         prepare();
     }
     private void prepare(){
