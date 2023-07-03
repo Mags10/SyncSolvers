@@ -133,7 +133,7 @@ public class Level extends World
         if(life >= maxLife) life = maxLife;
         if(life <= 0){
             DeathScreen ds = new DeathScreen();
-        }
+        }else
         this.lifeIndicator.updateSprite(new GreenfootImage(this.dificulty + "-0" + this.life + ".png"));
     }
     
