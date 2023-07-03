@@ -23,7 +23,7 @@ public class Lvl2 extends Level
     private void prepare(){
         Player player = new Player();
         addObject(player,62,25);
-        Block block = new Block(72, 24);
+Block block = new Block(72, 24);
 addObject(block, 36, 84);
 block = new Block(48, 24);
 addObject(block, 624, 84);
@@ -125,8 +125,8 @@ block = new Block(48, 24);
 addObject(block, 816, 948);
 block = new Block(336, 24);
 addObject(block, 168, 1020);
-block = new Block(1104, 24);
-addObject(block, 1416, 1020);
+block = new Block(1128, 24);
+addObject(block, 1428, 1020);
 Obstacle peak = new Obstacle();
 addObject(peak, 468, 108);
 peak = new Obstacle();
