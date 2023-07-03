@@ -40,12 +40,27 @@ public class Level extends World
         
     }
     
+    private int dificulty;
+    
     public Level(int width, int height, int bg, GreenfootImage img, int d)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(width, height, 1);
         this.scenary = new Sprite(img, 1);
         this.addBackground(bg);
+        this.dificulty = d;
+        switch(d){
+            case 1:
+                this.maxLife = 5;
+            break;
+            case 2:
+                this.maxLife = 3;
+            break;
+            case 3:
+                this.maxLife = 1;
+            break;
+        }
+        this.life = this.maxLife;
     }
     
     Sprite[] backgrounds = new Sprite[6];
@@ -104,7 +119,7 @@ public class Level extends World
         if(this.lifeIndicator != null){
             this.lifeIndicator.changeActorObjetive(a);
         }else{
-            this.lifeIndicator = new Sprite(new GreenfootImage("l0" + this.life + ".png"), a, 3);
+            this.lifeIndicator = new Sprite(new GreenfootImage(this.dificulty + "-0" + this.life + ".png"), a, 3);
             addObject(this.lifeIndicator, 0, 0);
             this.lifeIndicator.setOffset(-230, 185);
         }   
@@ -116,8 +131,10 @@ public class Level extends World
     public void updateLife(int val){
         life += val;
         if(life >= maxLife) life = maxLife;
-        if(life < 1) life = 1;
-        this.lifeIndicator.updateSprite(new GreenfootImage("l0" + this.life + ".png"));
+        if(life <= 0){
+            DeathScreen ds = new DeathScreen();
+        }
+        this.lifeIndicator.updateSprite(new GreenfootImage(this.dificulty + "-0" + this.life + ".png"));
     }
     
     public void setCamera(Actor a){
