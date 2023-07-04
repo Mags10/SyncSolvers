@@ -8,20 +8,18 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Lvl1 extends Level
 {
-
-    /**
-     * Constructor for objects of class Lvl1.
-     * 
-     */
+    private GreenfootSound music;
     public Lvl1(int d)
     {
     super(2000, 1200, 1, new GreenfootImage("Map002.png"), d);
-    
     prepare();
-        
-        
+    music = new GreenfootSound("DeathbyGlamour.mp3");
+    music.setVolume(18);
+    music.playLoop();
     }
-    
+    public GreenfootSound getMusic(){
+        return music;
+    }
     private void prepare()
     {
         Player player = new Player();

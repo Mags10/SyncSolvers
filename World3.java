@@ -13,9 +13,10 @@ public class World3 extends Screen
     Nivel3 n3 = new Nivel3();
     Nivel4 n4 = new Nivel4();
     Regresar r = new Regresar();
-    
-    public World3()
+    private GreenfootSound music;
+    public World3(GreenfootSound s)
     {
+        this.music = s;
         GreenfootImage img = new GreenfootImage("Background-4.png");
         setBackground(img);
         addObject(n1,120,50);
@@ -26,21 +27,25 @@ public class World3 extends Screen
     }
     public void act(){
         if(Greenfoot.mouseClicked(n1)){
+            music.stop();
             Lvl1 lvl1 = new Lvl1(3);
             Camera c = new Camera(lvl1, 300, 200);
             Greenfoot.setWorld(c);
         }
         if(Greenfoot.mouseClicked(n2)){
+            music.stop();
             Lvl2 lvl2 = new Lvl2(3);
             Camera c = new Camera(lvl2, 300, 200);
             Greenfoot.setWorld(c);
         }
         if(Greenfoot.mouseClicked(n3)){
+            music.stop();
             Lvl3 lvl3 = new Lvl3(3);
             Camera c = new Camera(lvl3, 300, 200);
             Greenfoot.setWorld(c);
         }
         if(Greenfoot.mouseClicked(n4)){
+            music.stop();
             Lvl4 lvl4 = new Lvl4(3);
             Camera c = new Camera(lvl4, 300, 200);
             Greenfoot.setWorld(c);

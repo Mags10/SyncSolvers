@@ -8,18 +8,19 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Lvl2 extends Level
 {
-
-    /**
-     * Constructor for objects of class Lvl2.
-     * 
-     */
+    private GreenfootSound music;
     public Lvl2(int d)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(2000, 1200, 1, new GreenfootImage("Map003.png"), d);
         prepare();
+        music = new GreenfootSound("GhostFight.mp3");
+        music.setVolume(18);
+        music.playLoop();
     }
-    
+    public GreenfootSound getMusic(){
+        return music;
+    }
     private void prepare(){
         Player player = new Player();
         addObject(player,62,25);

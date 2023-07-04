@@ -20,7 +20,6 @@ public class Level extends World
     private boolean seted = true;
     private Sprite lifeIndicator;
     private Sprite scenary;
-    
     /**
      * Constructor for objects of class Level.
      * 
@@ -132,11 +131,30 @@ public class Level extends World
         life += val;
         if(life >= maxLife) life = maxLife;
         if(life <= 0){
+            if(this instanceof Lvl1){
+                ((Lvl1)this).getMusic().stop();
+            }
+            if(this instanceof Lvl2){
+                ((Lvl2)this).getMusic().stop();
+            }
+            if(this instanceof Lvl3){
+                ((Lvl3)this).getMusic().stop();
+            }
+            if(this instanceof Lvl4){
+                ((Lvl4)this).getMusic().stop();
+            }
             DeathScreen ds = new DeathScreen(this, this.dificulty);
             Greenfoot.setWorld(ds);
-        }else
+        }else{
         this.lifeIndicator.updateSprite(new GreenfootImage(this.dificulty + "-0" + this.life + ".png"));
-    }
+        try{
+            this.lifeIndicator.updateSprite(new GreenfootImage(this.dificulty + "-0" + this.life + ".png"));
+            GreenfootSound sonidoDamage = new GreenfootSound("damagesound.mp3");
+            sonidoDamage.setVolume(50);
+            sonidoDamage.play();
+    }catch(ArrayIndexOutOfBoundsException e){}
+ }
+}
     
     public void setCamera(Actor a){
         this.camera = new Camera(this, a);

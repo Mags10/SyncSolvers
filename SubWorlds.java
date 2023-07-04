@@ -26,6 +26,7 @@ public class SubWorlds extends Screen
     }
     public SubWorlds(GreenfootSound music)
     {
+        
         GreenfootImage img = new GreenfootImage("Background-4.png");
         setBackground(img);
         addObject(b1,150,300);
@@ -38,15 +39,15 @@ public class SubWorlds extends Screen
     }
     public void act(){
         if(Greenfoot.mouseClicked(b3)){
-            World1 world1 = new World1();
+            World1 world1 = new World1(this.music);
             Greenfoot.setWorld(world1);
         }
         if(Greenfoot.mouseClicked(b2)){
-            World2 world2 = new World2();
+            World2 world2 = new World2(this.music);
             Greenfoot.setWorld(world2);
         }
         if(Greenfoot.mouseClicked(b1)){
-            World3 world3 = new World3();
+            World3 world3 = new World3(this.music);
             Greenfoot.setWorld(world3);
         }
         if(Greenfoot.mouseClicked(r)){
