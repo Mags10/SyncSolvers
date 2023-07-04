@@ -119,8 +119,18 @@ public class Player extends Entity {
     }
     
     private boolean isDamaged = false;
+    private int activeButton = 0;
+    private boolean canPress = true;
     
     private void handleCollision() {
+        if(!canPress){
+            activeButton += 1;
+            if(activeButton > 50){
+                activeButton = 0;
+                canPress = true;
+            }
+        }        
+        
         if (jump && jumpCont > 0) {
             jumpCont--;
         }
@@ -142,7 +152,20 @@ public class Player extends Entity {
             this.indicator.updateSprite(new GreenfootImage("indicatorPlayerDamage.png"), 1);
             ((Level)this.getWorld()).updateLife(-1);
         }
+        
+        Entity psBlock = (Entity) getOneIntersectingObject(PushButton.class);
+    
+        if (psBlock != null && Greenfoot.isKeyDown("space") && canPress){
+            ((PushButton)psBlock).push();
+            canPress = false;
+        }
 
+        Entity scBlock = (Entity) getOneIntersectingObject(Orb.class);
+    
+        if (scBlock != null){
+            ((Orb)scBlock).delete();
+            ((Level)this.getWorld()).addScore();
+        }
         
         Entity wlBlock = (Entity) getOneIntersectingObject(Wall.class);
     

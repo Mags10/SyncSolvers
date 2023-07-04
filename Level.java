@@ -19,7 +19,11 @@ public class Level extends World
     private Player currentPlayer;
     private boolean seted = true;
     private Sprite lifeIndicator;
+    private Sprite orbIndicator;
+    private Sprite orbText;
     private Sprite scenary;
+    private int score = 0;
+    
     /**
      * Constructor for objects of class Level.
      * 
@@ -103,15 +107,7 @@ public class Level extends World
                 movy = (this.getHeight()/2 - movementFactorsY[i]/2) + (int)(movementFactorsY[i] * rely);
                 backgrounds[i].setLocation(movx, movy);
             }
-        }
-        
-        if(Greenfoot.isKeyDown("g")){
-            updateLife(-1);
-        }
-        if(Greenfoot.isKeyDown("h")){
-            updateLife(1);
-        }
-        
+        }        
     }
     
     public void drawLife(Actor a){
@@ -122,6 +118,17 @@ public class Level extends World
             addObject(this.lifeIndicator, 0, 0);
             this.lifeIndicator.setOffset(-230, 185);
         }   
+        if(this.orbIndicator != null){
+            this.orbIndicator.changeActorObjetive(a);
+            this.orbText.changeActorObjetive(a);
+        }else{
+            this.orbIndicator = new Sprite(new GreenfootImage("orb1.png"), a, 1);
+            addObject(this.orbIndicator, 0, 0);
+            this.orbIndicator.setOffset(240, 185);
+            this.orbText = new Sprite(new GreenfootImage("x" + this.score, 32, Color.WHITE, null), a, 1);
+            addObject(this.orbText, 0, 0);
+            this.orbText.setOffset(270, 185);
+        }  
     }
     
     private int life = 5;
@@ -177,6 +184,11 @@ public class Level extends World
         Player nextPlayer = players.get(indexCurrentPlayer);
         currentPlayer.changeToPlayer(nextPlayer);
         currentPlayer = nextPlayer;
+    }
+    
+    public void addScore(){
+        this.score++;
+        this.orbText.updateSprite(new GreenfootImage("x" + this.score, 32, Color.WHITE, null));
     }
 
 }

@@ -9,23 +9,37 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class TestLevel extends Level
 {
 
-    /**
-     * Constructor for objects of class TestLevel.
-     * 
-     */
     public TestLevel()
     {   
-        super(2000, 1200);
+        super(2000, 1200, 1, new GreenfootImage("Map002.png"), 1);
         prepare();
         
     }
     
-    /**
-     * Prepare the world for the start of the program.
-     * That is: create the initial objects and add them to the world.
-     * super.setCamera(player);
-     */
     private void prepare()
     {
+
+        Player player = new Player();
+        addObject(player,62,750);
+        
+        player = new Player();
+        addObject(player,82,750);
+        
+        player = new Player();
+        addObject(player,102,750);
+
+        Ground g = new Ground(2000);
+        addObject(g, 1000, 800);
+
+        Laser laser = new Laser(100);
+        addObject(laser,512,739);
+        
+        PushButton b = new PushButton(laser);
+        addObject(b,480,769);
+        
+        Orb be = new Orb();
+        addObject(be,400,769);
     }
+    
+    
 }

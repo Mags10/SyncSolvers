@@ -40,6 +40,14 @@ public class Sprite extends Actor
         setImage(img);
     }
     
+    Sprite(GreenfootImage img, Actor e, double scale, boolean notScaleToEntity){
+        this.asocActor = e;
+        this.scale = scale;
+        this.imgLocal = img;
+        img.scale(((int)((double)img.getWidth() * scale)), ((int)((double)img.getHeight() * scale)));
+        setImage(img);
+    }
+    
     Sprite(GreenfootImage img, double scale){
         this.scale = scale;
         this.imgLocal = img;
@@ -77,6 +85,10 @@ public class Sprite extends Actor
     
     public void changeActorObjetive(Actor e){
         this.asocActor = e;
+    }
+    
+    public void setToButton(boolean val){
+        this.fixedToButton = val;
     }
     
     public void setTransparency(int value){
