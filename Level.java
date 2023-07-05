@@ -82,6 +82,7 @@ public class Level extends World
     }
     
     private boolean isCameraSeted = false;
+    private int numOrbs;
     
     public void act(){
         int movx = 0;
@@ -92,6 +93,8 @@ public class Level extends World
                 indexCurrentPlayer = 0;
                 currentPlayer = players.get(indexCurrentPlayer);
             }
+            List<Orb> lst = getObjects(Orb.class);
+            this.numOrbs = lst.size();
             seted = false;
         }
         if(currentPlayer.cameraInitialized()){
@@ -172,7 +175,7 @@ public class Level extends World
         try{
             this.lifeIndicator.updateSprite(new GreenfootImage(this.dificulty + "-0" + this.life + ".png"));
             GreenfootSound sonidoDamage = new GreenfootSound("damagesound.mp3");
-            sonidoDamage.setVolume(50);
+            sonidoDamage.setVolume(100);
             sonidoDamage.play();
     }catch(ArrayIndexOutOfBoundsException e){}
  }
@@ -204,6 +207,34 @@ public class Level extends World
     public void addScore(){
         this.score++;
         this.orbText.updateSprite(new GreenfootImage("x" + this.score, 32, Color.WHITE, null));
+    }
+    
+    private boolean isWin = false;
+    
+    public void checkWin(){
+        boolean res = true;
+        List<Player> lst = getObjects(Player.class);
+        for(Player p : lst){
+            res = res && p.checkFinishTouch();
+        }
+        if(res && !isWin){
+            isWin = true;
+            if(this instanceof Lvl1){
+                ((Lvl1)this).getMusic().stop();
+            }
+            if(this instanceof Lvl2){
+                ((Lvl2)this).getMusic().stop();
+            }
+            if(this instanceof Lvl3){
+                ((Lvl3)this).getMusic().stop();
+            }
+            if(this instanceof Lvl4){
+                ((Lvl4)this).getMusic().stop();
+            }
+            
+            Win ds = new Win(this.score, this.numOrbs);
+            Greenfoot.setWorld(ds);
+        }
     }
 
 }

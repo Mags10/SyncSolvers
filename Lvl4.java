@@ -567,6 +567,7 @@ public class Lvl4 extends Level
         pushButton = new PushButton(laser1, "Blue");
         addObject(pushButton, 108, 948);
 
-        
+        Finish finish = new Finish();
+        addObject(finish,1890,258);
     }
 }

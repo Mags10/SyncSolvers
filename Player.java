@@ -121,6 +121,7 @@ public class Player extends Entity {
     private boolean isDamaged = false;
     private int activeButton = 0;
     private boolean canPress = true;
+    private boolean checkFinish = true;
     
     private void handleCollision() {
         if(!canPress){
@@ -169,6 +170,14 @@ public class Player extends Entity {
             }
         }
         
+        Entity fnBlock = (Entity) getOneIntersectingObject(Finish.class);
+        if (fnBlock != null && this.checkFinish){
+            ((Level)this.getWorld()).checkWin();
+            this.checkFinish = false;
+        }else{
+            this.checkFinish = true;
+        }
+        
         Entity wlBlock = (Entity) getOneIntersectingObject(Wall.class);
     
         if (wlBlock != null) {
@@ -209,6 +218,11 @@ public class Player extends Entity {
         if (!inGround) {
             setLocation(getX(), getY() + verticalSpeed);
         }
+    }
+    
+    public boolean checkFinishTouch(){
+        Entity bk = (Entity) getOneIntersectingObject(Finish.class);
+        return bk != null;
     }
 
     private int countAnim = 16;

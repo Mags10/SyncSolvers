@@ -38,7 +38,7 @@ public class Lvl2 extends Level
         addObject(player2,366,336);
         Player player3 = new Player();
         addObject(player3,1806,976);
-        
+
         Block block = new Block(72, 24);
         addObject(block, 36, 84);
         block = new Block(48, 24);
@@ -691,6 +691,8 @@ public class Lvl2 extends Level
         addObject(pushButton, 1884, 732);
         pushButton = new PushButton(laser4, "Purple");
         addObject(pushButton, 1572, 996);
-        
+
+        Finish finish = new Finish();
+        addObject(finish,65,957);
     }
 }

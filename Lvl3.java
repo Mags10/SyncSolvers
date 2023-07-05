@@ -36,7 +36,7 @@ public class Lvl3 extends Level
         addObject(player2,58,137);
         Player player3 = new Player();
         addObject(player3,1444,713);
-        
+
         Block block = new Block(120, 24);
         addObject(block, 60, 84);
         block = new Block(96, 24);
@@ -107,8 +107,7 @@ public class Lvl3 extends Level
         addObject(block, 996, 948);
         block = new Block(24, 24);
         addObject(block, 1908, 252);
-        
-        
+
         Obstacle peak = new Obstacle();
         addObject(peak, 732, 60);
         peak = new Obstacle();
@@ -287,7 +286,7 @@ public class Lvl3 extends Level
         addObject(peak, 1860, 252);
         peak = new Obstacle();
         addObject(peak, 1884, 252);
-        
+
         peak = new Obstacle();
         addObject(peak, 492, 468);
         peak = new Obstacle();
@@ -659,6 +658,7 @@ public class Lvl3 extends Level
         pushButton = new PushButton(laser2, "Red");
         addObject(pushButton, 84, 612);
 
-        
+        Finish finish = new Finish();
+        addObject(finish,1952,700);
     }
 }

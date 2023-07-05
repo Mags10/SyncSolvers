@@ -21,15 +21,17 @@ public class TestLevel extends Level
 
         Player player = new Player();
         addObject(player,62,750);
-        
+
         player = new Player();
         addObject(player,82,750);
-        
+
         player = new Player();
         addObject(player,102,750);
 
         Ground g = new Ground(2000);
         addObject(g, 1000, 800);
+        Finish finish = new Finish();
+        addObject(finish,432,740);
     }
     
     

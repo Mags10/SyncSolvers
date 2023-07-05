@@ -10,9 +10,15 @@ public class Win extends Screen
 {
     Salir s = new Salir();
     private GreenfootSound music;
-    public Win()
+    public Win(int puntaje, int max)
     {
         prepare();
+        Sprite orbText = new Sprite(new GreenfootImage(puntaje + "/" + max, 32, Color.WHITE, null), 1);
+        addObject(orbText, 300, 350);
+        orbText.setOffset(-12, 0);
+        Sprite orbIndicator = new Sprite(new GreenfootImage("orb1.png"), 1);
+        addObject(orbIndicator, 300, 350);
+        orbIndicator.setOffset(38, 0);
     }
     public void prepare(){
         WinS w = new WinS();
