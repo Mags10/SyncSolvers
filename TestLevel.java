@@ -30,15 +30,6 @@ public class TestLevel extends Level
 
         Ground g = new Ground(2000);
         addObject(g, 1000, 800);
-
-        Laser laser = new Laser(100);
-        addObject(laser,512,739);
-        
-        PushButton b = new PushButton(laser);
-        addObject(b,480,769);
-        
-        Orb be = new Orb();
-        addObject(be,400,769);
     }
     
     

@@ -38,7 +38,11 @@ public class Orb extends Scenary
     
     public void delete(){
         this.act = false;
-        this.setLocation(-500, -500);
+        this.texture.setTransparency(0);
+    }
+    
+    public boolean validPoint(){
+        return this.act;
     }
     
 }

@@ -23,7 +23,7 @@ public class Player extends Entity {
     
     
     Player(){
-        super(new GreenfootImage("Capa 4.png"), 20, 1, false);
+        super(new GreenfootImage("Capa 4.png"), 20, 1, true);
         this.camCtrl = new FollowerCam(this, 80, -80);
         this.indicator = new Sprite(new GreenfootImage("indicatorPlayer.png"), this, 0.7);
         
@@ -155,7 +155,7 @@ public class Player extends Entity {
         
         Entity psBlock = (Entity) getOneIntersectingObject(PushButton.class);
     
-        if (psBlock != null && Greenfoot.isKeyDown("space") && canPress){
+        if (psBlock != null && Greenfoot.isKeyDown("space") && canPress && this.isSelected){
             ((PushButton)psBlock).push();
             canPress = false;
         }
@@ -163,8 +163,10 @@ public class Player extends Entity {
         Entity scBlock = (Entity) getOneIntersectingObject(Orb.class);
     
         if (scBlock != null){
-            ((Orb)scBlock).delete();
-            ((Level)this.getWorld()).addScore();
+            if(((Orb)scBlock).validPoint()){
+                ((Orb)scBlock).delete();
+                ((Level)this.getWorld()).addScore();
+            }
         }
         
         Entity wlBlock = (Entity) getOneIntersectingObject(Wall.class);

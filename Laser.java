@@ -11,9 +11,9 @@ public class Laser extends Scenary
     private Sprite laser, top, button;
     private Wall left, right;
     
-    Laser(int height){
+    Laser(int height, String color){
         super(24, height);
-        GreenfootImage ls = new GreenfootImage("laser.png");
+        GreenfootImage ls = new GreenfootImage(color + "laser.png");
         ls.scale(12, height-6);
         this.laser = new Sprite(ls, this, 1, true);
         this.laser.setToButton(false);

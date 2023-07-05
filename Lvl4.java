@@ -17,6 +17,15 @@ public class Lvl4 extends Level
         music.setVolume(18);
         music.playLoop();
     }
+    public Lvl4()
+    {
+        super(2000, 1200, 1, new GreenfootImage("Map005.png"), 1);
+        prepare();
+        music = new GreenfootSound("Asgore.mp3");
+        music.setVolume(18);
+        music.playLoop();
+    }
+
     public GreenfootSound getMusic(){
         return music;
     }

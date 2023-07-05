@@ -123,8 +123,8 @@ public class Level extends World
             this.orbText.changeActorObjetive(a);
         }else{
             this.orbIndicator = new Sprite(new GreenfootImage("orb1.png"), a, 1);
-            addObject(this.orbIndicator, 0, 0);
-            this.orbIndicator.setOffset(240, 185);
+            addObject(this.orbIndicator, -500, -500);
+            this.orbIndicator.setOffset(230, 185);
             this.orbText = new Sprite(new GreenfootImage("x" + this.score, 32, Color.WHITE, null), a, 1);
             addObject(this.orbText, 0, 0);
             this.orbText.setOffset(270, 185);
