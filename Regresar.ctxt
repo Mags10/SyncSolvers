@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=Regresar
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Regresar\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ La\ clase\ Regresar\ representa\ un\ bot\u00F3n\ para\ volver\ atr\u00E1s\ en\ la\ interfaz\ del\ juego.\r\n\ Extiende\ la\ clase\ Button,\ lo\ que\ significa\ que\ es\ un\ Actor\ interactivo\ que\ puede\ ser\r\n\ colocado\ en\ el\ mundo\ y\ responder\ a\ eventos\ del\ mouse.\r\n\ Cuando\ se\ crea\ una\ instancia\ de\ Regresar,\ se\ configura\ su\ imagen\ para\ mostrar\ "return.png".\r\n\ \r\n\ Nota\:\ Esta\ clase\ define\ el\ comportamiento\ del\ bot\u00F3n\ de\ regreso\ en\ la\ interfaz.\r\n\ \r\n\ @author\ Noe\ Cisneros\r\n\ @version\ 28/06/2023\r\n
 comment1.params=
 comment1.target=void\ act()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Regresar\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment1.text=\r\n\ Realiza\ las\ acciones\ correspondientes\ al\ bot\u00F3n\ de\ regreso.\r\n\ Este\ m\u00E9todo\ se\ llama\ autom\u00E1ticamente\ en\ cada\ ciclo\ del\ juego.\r\n\ En\ esta\ implementaci\u00F3n,\ el\ m\u00E9todo\ establece\ la\ imagen\ del\ bot\u00F3n\ para\ mostrar\ "return.png".\r\n
 numComments=2

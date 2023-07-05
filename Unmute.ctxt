@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=Unmute
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Unmute\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ La\ clase\ Unmute\ representa\ un\ bot\u00F3n\ para\ desactivar\ el\ silencio\ del\ sonido.\r\n\ Extiende\ la\ clase\ Button,\ lo\ que\ significa\ que\ es\ un\ Actor\ interactivo\ que\ puede\ ser\r\n\ colocado\ en\ el\ mundo\ y\ responder\ a\ eventos\ del\ mouse.\r\n\ Cuando\ se\ crea\ una\ instancia\ de\ Unmute,\ se\ configura\ su\ imagen\ para\ mostrar\ "unmute.png"\r\n\ y\ se\ escala\ al\ nuevo\ tama\u00F1o.\r\n\ \r\n\ Nota\:\ Esta\ clase\ define\ la\ apariencia\ del\ bot\u00F3n\ de\ desactivar\ el\ silencio\ en\ la\ interfaz.\r\n\ \r\n\ @autor\ Noe\ Cisneros\r\n\ @version\ 29/06/2023\r\n
 comment1.params=
 comment1.target=void\ act()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Unmute\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment1.text=\r\n\ Define\ el\ comportamiento\ del\ bot\u00F3n\ de\ desactivar\ el\ silencio.\r\n\ Configura\ la\ imagen\ del\ actor\ para\ mostrar\ "unmute.png"\ y\ la\ escala\ al\ nuevo\ tama\u00F1o.\r\n
 numComments=2

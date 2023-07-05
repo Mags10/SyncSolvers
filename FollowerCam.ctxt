@@ -1,18 +1,25 @@
 #BlueJ class context
 comment0.target=FollowerCam
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Sprite\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ La\ clase\ `FollowerCam`\ representa\ una\ c\u00E1mara\ que\ sigue\ a\ una\ entidad\ en\ el\ juego.\r\n\ Puede\ ajustar\ el\ desplazamiento\ horizontal\ y\ vertical\ de\ la\ c\u00E1mara\ en\ relaci\u00F3n\ con\ la\ entidad\ asociada.\r\n\ Tambi\u00E9n\ tiene\ la\ capacidad\ de\ agitar\ la\ c\u00E1mara\ y\ restablecerla\ a\ su\ posici\u00F3n\ original.\r\n\ \r\n\ @autor\ Miguel\ Gtz\r\n\ @version\ 03/07/2023\r\n
 comment1.params=e\ dx\ dy
 comment1.target=FollowerCam(Entity,\ int,\ int)
+comment1.text=\r\n\ Crea\ una\ nueva\ instancia\ de\ la\ clase\ `FollowerCam`\ con\ la\ entidad\ asociada\ y\ los\ desplazamientos\ iniciales.\r\n\ \r\n\ @param\ e\ La\ entidad\ a\ la\ que\ seguir\u00E1\ la\ c\u00E1mara\r\n\ @param\ dx\ El\ desplazamiento\ horizontal\ inicial\ de\ la\ c\u00E1mara\r\n\ @param\ dy\ El\ desplazamiento\ vertical\ inicial\ de\ la\ c\u00E1mara\r\n
 comment2.params=stepSize\ max
 comment2.target=void\ modifyCameraXOfset(int,\ int)
+comment2.text=\r\n\ Modifica\ el\ desplazamiento\ horizontal\ de\ la\ c\u00E1mara\ en\ incrementos\ y\ un\ l\u00EDmite\ m\u00E1ximo.\r\n\ \r\n\ @param\ stepSize\ El\ tama\u00F1o\ del\ paso\ del\ incremento\r\n\ @param\ max\ El\ l\u00EDmite\ m\u00E1ximo\ para\ el\ desplazamiento\ horizontal\r\n
 comment3.params=stepSize\ max
 comment3.target=void\ modifyCameraYOfset(int,\ int)
+comment3.text=\r\n\ Modifica\ el\ desplazamiento\ vertical\ de\ la\ c\u00E1mara\ en\ incrementos\ y\ un\ l\u00EDmite\ m\u00E1ximo.\r\n\ \r\n\ @param\ stepSize\ El\ tama\u00F1o\ del\ paso\ del\ incremento\r\n\ @param\ max\ El\ l\u00EDmite\ m\u00E1ximo\ para\ el\ desplazamiento\ vertical\r\n
 comment4.params=XstepSize\ YstepSize
 comment4.target=void\ goToOriginalOfsetByStep(int,\ int)
+comment4.text=\r\n\ Restablece\ gradualmente\ el\ desplazamiento\ de\ la\ c\u00E1mara\ a\ su\ valor\ original\ mediante\ incrementos.\r\n\r\n\ @param\ XstepSize\ el\ tama\u00F1o\ del\ incremento\ para\ el\ desplazamiento\ horizontal\r\n\ @param\ YstepSize\ el\ tama\u00F1o\ del\ incremento\ para\ el\ desplazamiento\ vertical\r\n
 comment5.params=
 comment5.target=void\ goToOriginalOfset()
+comment5.text=\r\n\ Restablece\ el\ desplazamiento\ de\ la\ c\u00E1mara\ a\ su\ valor\ original.\r\n
 comment6.params=
 comment6.target=void\ enableShake()
+comment6.text=\r\n\ Activa\ el\ efecto\ de\ sacudida\ de\ la\ c\u00E1mara.\r\n
 comment7.params=
 comment7.target=void\ act()
+comment7.text=\r\n\ El\ m\u00E9todo\ act\ se\ llama\ autom\u00E1ticamente\ en\ cada\ acto\ del\ escenario.\r\n\ Ajusta\ la\ posici\u00F3n\ de\ la\ c\u00E1mara\ siguiendo\ al\ objeto\ asociado\ y\ aplicando\ desplazamientos.\r\n\ Tambi\u00E9n\ puede\ aplicar\ el\ efecto\ de\ sacudida\ a\ la\ c\u00E1mara.\r\n
 numComments=8

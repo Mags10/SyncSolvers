@@ -1,34 +1,50 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Lvl3 here.
+ * Clase Lvl3: representa el primer nivel del juego.
+ * Extiende la clase Level.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Noe & Miguel
+ * @version 04/07/2023
  */
-public class Lvl3 extends Level
-{
+public class Lvl3 extends Level{
+    
     private GreenfootSound music;
-    public Lvl3(int d)
-    {
+    /**
+     * Constructor de la clase Lvl3.
+     * Crea un nuevo nivel con el ancho y alto especificados, el fondo dado y la dificultad dada.
+     * 
+     * @param d La dificultad del nivel.
+     */
+    public Lvl3(int d){
         super(2000, 1200, 1, new GreenfootImage("Map004.png"), d);
         prepare();
         music = new GreenfootSound("Heartache.mp3");
         music.setVolume(18);
         music.playLoop();
     }
-    public Lvl3()
-    {
+    /**
+     * Constructor de la clase Lvl3.
+     * Crea un nuevo nivel con el ancho y alto especificados, el fondo dado y la dificultad predeterminada.
+     */
+    public Lvl3(){
         super(2000, 1200, 1, new GreenfootImage("Map004.png"), 1);
         prepare();
         music = new GreenfootSound("Heartache.mp3");
         music.setVolume(18);
         music.playLoop();
     }
+    /**
+     * Obtiene la música del nivel.
+     * 
+     * @return El objeto GreenfootSound que representa la música del nivel.
+     */
     public GreenfootSound getMusic(){
         return music;
     }
-    
+    /**
+     * Prepara el nivel colocando los objetos y jugadores en posiciones iniciales.
+     */
     private void prepare(){
         Player player = new Player();
         addObject(player,62,25);

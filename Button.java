@@ -1,17 +1,13 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Button here.
+ * Clase Button: representa un botón en el escenario.
+ * Extiende la clase Actor.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Miguel Gtz
+ * @version 27/06/2023
  */
-public class Button extends Actor
-{
-    /**
-     * Act - do whatever the Button wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+public class Button extends Actor{
     public void act()
     {
         // Add your action code here.

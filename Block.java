@@ -1,19 +1,26 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Block here.
+ * La clase Block representa un bloque de escenario en el juego.
+ * Extiende la clase Scenary y agrega componentes adicionales, como suelo y paredes.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Miguel Gtz
+ * @version 02/07/2023
  */
-public class Block extends Scenary
-{
+public class Block extends Scenary{
+    
     private Ground top, button;
     private Wall left, right;
-    
     private int Vdensity;
     private int Hdensity;
+    private boolean drawed = false;
     
+    /**
+     * Crea un bloque de escenario con el ancho y alto especificados.
+     *
+     * @param width El ancho del bloque.
+     * @param height La altura del bloque.
+     */
     public Block(int width, int height){
         super(width, height);
         this.Vdensity = height;
@@ -23,8 +30,10 @@ public class Block extends Scenary
         this.right = new Wall(this.Hdensity, height - 2, false);
     }
     
-    private boolean drawed = false;
-    
+    /**
+     * Método que se ejecuta en cada ciclo del juego.
+     * Agrega los componentes del bloque (suelo y paredes) al mundo una vez.
+     */
     public void act(){
         if(!this.drawed){
             this.getWorld().addObject(this.top, this.getX(), this.getTop() + this.Vdensity / 2);
@@ -33,15 +42,5 @@ public class Block extends Scenary
             this.drawed = true;
         }
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
 }

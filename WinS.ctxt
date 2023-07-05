@@ -1,8 +1,10 @@
 #BlueJ class context
 comment0.target=WinS
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ WinS\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ La\ clase\ WinS\ representa\ la\ animaci\u00F3n\ de\ la\ pantalla\ de\ victoria.\r\n\ Extiende\ la\ clase\ Actor\ y\ se\ utiliza\ para\ mostrar\ una\ secuencia\ de\ im\u00E1genes\ que\ forman\ la\ animaci\u00F3n\ de\ victoria.\r\n\ \r\n\ @author\ Noe\ Cisneros\r\n\ @version\ 03/07/2023\r\n
 comment1.params=
 comment1.target=WinS()
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ WinS.\r\n\ Inicializa\ la\ lista\ de\ im\u00E1genes\ y\ establece\ la\ primera\ imagen\ como\ la\ imagen\ actual.\r\n
 comment2.params=
 comment2.target=void\ act()
+comment2.text=\r\n\ Realiza\ una\ acci\u00F3n\ en\ cada\ iteraci\u00F3n\ del\ ciclo\ de\ juego.\r\n\ Cambia\ la\ imagen\ en\ cada\ iteraci\u00F3n\ para\ crear\ la\ animaci\u00F3n\ de\ victoria.\r\n
 numComments=3

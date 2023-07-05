@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=MenuDificil
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ MenuDificil\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Clase\ MenuDificil\:\ representa\ un\ bot\u00F3n\ para\ seleccionar\ la\ dificultad\ "Dif\u00EDcil"\ en\ un\ men\u00FA.\r\n\ Extiende\ la\ clase\ Button.\r\n\ \r\n\ @author\ Noe\ Cisneros\r\n\ @version\ 28/06/2023\r\n
 comment1.params=
 comment1.target=void\ act()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ MenuDificil\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment1.text=\r\n\ Realiza\ las\ acciones\ correspondientes\ al\ bot\u00F3n\ de\ dificultad\ "Dif\u00EDcil".\r\n\ Este\ m\u00E9todo\ es\ llamado\ autom\u00E1ticamente\ en\ cada\ ciclo\ del\ juego.\r\n\ Actualiza\ la\ imagen\ del\ bot\u00F3n\ para\ mostrar\ la\ imagen\ "dificil.png".\r\n
 numComments=2

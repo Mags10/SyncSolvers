@@ -1,8 +1,10 @@
 #BlueJ class context
 comment0.target=DeathSC
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ deathsc\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ La\ clase\ DeathSC\ representa\ un\ Actor\ que\ muestra\ una\ secuencia\ de\ im\u00E1genes\ en\ un\ bucle,\r\n\ creando\ una\ animaci\u00F3n\ de\ muerte.\ Cada\ cierto\ tiempo,\ cambia\ la\ imagen\ mostrada\ para\r\n\ mostrar\ la\ siguiente\ imagen\ en\ la\ secuencia.\r\n\ \r\n\ Nota\:\ Esta\ clase\ define\ la\ animaci\u00F3n\ de\ muerte\ para\ un\ personaje\ en\ el\ juego.\r\n\ \r\n\ @autor\ Noe\ Cisneros\r\n\ @version\ 03/07/2023\r\n
 comment1.params=
 comment1.target=DeathSC()
+comment1.text=\r\n\ Crea\ una\ instancia\ de\ DeathSC.\r\n\ Configura\ la\ lista\ de\ im\u00E1genes\ con\ las\ diferentes\ im\u00E1genes\ de\ la\ secuencia\ de\ muerte\r\n\ y\ establece\ la\ primera\ imagen\ como\ la\ imagen\ inicial\ del\ actor.\r\n
 comment2.params=
 comment2.target=void\ act()
+comment2.text=\r\n\ Define\ el\ comportamiento\ de\ la\ animaci\u00F3n\ de\ muerte.\r\n\ En\ cada\ iteraci\u00F3n,\ cambia\ la\ imagen\ mostrada\ para\ mostrar\ la\ siguiente\ imagen\ en\ la\ secuencia.\r\n\ El\ cambio\ de\ imagen\ ocurre\ cada\ 0.5\ segundos\ (500\ milisegundos).\r\n
 numComments=3

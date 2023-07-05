@@ -2,10 +2,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.List;
 
 /**
- * Write a description of class Level here.
+ * La clase Level representa un nivel en el juego.
+ * Extiende la clase World de Greenfoot y proporciona funcionalidad para el nivel del juego.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Miguel Gtz
+ * @version 04/07/2023
  */
 public class Level extends World
 {
@@ -23,18 +24,33 @@ public class Level extends World
     private Sprite orbText;
     private Sprite scenary;
     private int score = 0;
+    private int dificulty;
+    Sprite[] backgrounds = new Sprite[6];
+    //int[] movementFactorsX = {500, 700, 900, 1100, 1300, 1500};
+    int[] movementFactorsX = {1500, 1300, 1100, 900, 700, 500};
+    int[] movementFactorsY = {100, 200, 300, 400, 500, 600};
+    private boolean isCameraSeted = false;
+    private int numOrbs;
+    private int life = 5;
+    private int maxLife = 5;
+    private boolean isWin = false;
     
     /**
-     * Constructor for objects of class Level.
-     * 
+     * Constructor de la clase Level.
+     * Crea un nuevo mundo con 600x400 celdas y tamaño de celda de 1x1 píxeles.
      */
-    
     public Level()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1);
     }
-    
+    /**
+     * Constructor de la clase Level.
+     * Crea un nuevo mundo con el ancho y alto especificados y tamaño de celda de 1x1 píxeles.
+     * 
+     * @param width El ancho del mundo.
+     * @param height La altura del mundo.
+     */
     public Level(int width, int height)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -42,9 +58,16 @@ public class Level extends World
         this.addBackground(1);
         
     }
-    
-    private int dificulty;
-    
+    /**
+     * Constructor de la clase Level.
+     * Crea un nuevo mundo con el ancho y alto especificados, fondo y dificultad especificados.
+     * 
+     * @param width El ancho del mundo.
+     * @param height La altura del mundo.
+     * @param bg El número de fondo.
+     * @param img La imagen de fondo.
+     * @param d La dificultad del nivel.
+     */
     public Level(int width, int height, int bg, GreenfootImage img, int d)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -66,11 +89,9 @@ public class Level extends World
         this.life = this.maxLife;
     }
     
-    Sprite[] backgrounds = new Sprite[6];
-    //int[] movementFactorsX = {500, 700, 900, 1100, 1300, 1500};
-    int[] movementFactorsX = {1500, 1300, 1100, 900, 700, 500};
-    int[] movementFactorsY = {100, 200, 300, 400, 500, 600};
-    
+    /**
+     * Método para dibujar un fondo en particular con efecto parallax.
+     */
     private void addBackground(int bg){
         for(int i = -6; i < 0; i++){
             backgrounds[i + 6] = new Sprite(new GreenfootImage(bg + "" + i + ".png"), this.getWidth(), this.getHeight());
@@ -81,9 +102,9 @@ public class Level extends World
         }
     }
     
-    private boolean isCameraSeted = false;
-    private int numOrbs;
-    
+    /**
+     * Método actuar que se llama cuando se actualiza el mundo.
+     */
     public void act(){
         int movx = 0;
         int movy = 0;
@@ -128,6 +149,11 @@ public class Level extends World
         }
     }
     
+    /**
+     * Dibuja el indicador de vida y los indicadores de orbes en la pantalla.
+     * 
+     * @param a El actor al que se vinculan los indicadores.
+     */
     public void drawLife(Actor a){
         if(this.lifeIndicator != null){
             this.lifeIndicator.changeActorObjetive(a);
@@ -149,9 +175,11 @@ public class Level extends World
         }
     }
     
-    private int life = 5;
-    private int maxLife = 5;
-    
+    /**
+     * Actualiza la vida del jugador sumando o restando el valor dado.
+     * 
+     * @param val El valor a sumar o restar a la vida.
+     */
     public void updateLife(int val){
         life += val;
         if(life >= maxLife) life = maxLife;
@@ -171,25 +199,40 @@ public class Level extends World
             DeathScreen ds = new DeathScreen(this, this.dificulty);
             Greenfoot.setWorld(ds);
         }else{
-        this.lifeIndicator.updateSprite(new GreenfootImage(this.dificulty + "-0" + this.life + ".png"));
-        try{
             this.lifeIndicator.updateSprite(new GreenfootImage(this.dificulty + "-0" + this.life + ".png"));
-            GreenfootSound sonidoDamage = new GreenfootSound("damagesound.mp3");
-            sonidoDamage.setVolume(100);
-            sonidoDamage.play();
-    }catch(ArrayIndexOutOfBoundsException e){}
- }
-}
+            try{
+                this.lifeIndicator.updateSprite(new GreenfootImage(this.dificulty + "-0" + this.life + ".png"));
+                GreenfootSound sonidoDamage = new GreenfootSound("damagesound.mp3");
+                sonidoDamage.setVolume(100);
+                sonidoDamage.play();
+            }catch(ArrayIndexOutOfBoundsException e){}
+        }
+    }
     
+    /**
+     * Establece la cámara en el actor dado.
+     * 
+     * @param a El actor al que se establecerá la cámara.
+     */
     public void setCamera(Actor a){
         this.camera = new Camera(this, a);
         Greenfoot.setWorld(this.camera);
     }
     
+    /**
+     * Obtiene la cámara del nivel.
+     * 
+     * @return La cámara del nivel.
+     */
     public Camera getCamera(){
         return this.camera;
     }
     
+    /**
+     * Cambia al siguiente jugador disponible.
+     * 
+     * @param next True si se cambia al siguiente jugador, false si se cambia al jugador anterior.
+     */
     public void changePlayer(boolean next){
         if(next) indexCurrentPlayer++;
         else indexCurrentPlayer--;
@@ -204,13 +247,17 @@ public class Level extends World
         currentPlayer = nextPlayer;
     }
     
+    /**
+     * Añade un punto al contador de orbes.
+     */
     public void addScore(){
         this.score++;
         this.orbText.updateSprite(new GreenfootImage("x" + this.score, 32, Color.WHITE, null));
     }
     
-    private boolean isWin = false;
-    
+    /**
+     * Verifica si se ha completado el nivel.
+     */
     public void checkWin(){
         boolean res = true;
         List<Player> lst = getObjects(Player.class);

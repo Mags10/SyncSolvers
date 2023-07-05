@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=MenuFacil
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ MenuFacil\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ La\ clase\ MenuFacil\ representa\ un\ bot\u00F3n\ de\ dificultad\ "F\u00E1cil".\r\n\ Extiende\ la\ clase\ Button,\ lo\ que\ significa\ que\ es\ un\ Actor\ interactivo\ que\ puede\ ser\r\n\ colocado\ en\ el\ mundo\ y\ responder\ a\ eventos\ del\ mouse.\r\n\ Cuando\ se\ presiona\ el\ bot\u00F3n,\ se\ actualiza\ su\ imagen\ para\ mostrar\ "facil.png".\r\n\ \r\n\ Nota\:\ Esta\ clase\ forma\ parte\ del\ men\u00FA\ de\ selecci\u00F3n\ de\ dificultad\ y\ define\ el\ comportamiento\r\n\ del\ bot\u00F3n\ de\ dificultad\ "F\u00E1cil"\ en\ ese\ men\u00FA.\r\n\ \r\n\ @author\ Noe\ Cisneros\r\n\ @version\ 28/06/2023\r\n
 comment1.params=
 comment1.target=void\ act()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ MenuFacil\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment1.text=\r\n\ Realiza\ las\ acciones\ correspondientes\ al\ bot\u00F3n\ de\ dificultad\ "F\u00E1cil".\r\n\ Este\ m\u00E9todo\ es\ llamado\ autom\u00E1ticamente\ en\ cada\ ciclo\ del\ juego.\r\n\ Actualiza\ la\ imagen\ del\ bot\u00F3n\ para\ mostrar\ la\ imagen\ "facil.png".\r\n
 numComments=2

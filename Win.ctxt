@@ -1,10 +1,13 @@
 #BlueJ class context
 comment0.target=Win
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Win\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Clase\ Win\:\ representa\ la\ pantalla\ de\ victoria\ del\ juego.\r\n\ Extiende\ la\ clase\ Screen.\r\n\ \r\n\ @author\ Noe\ Cisneros\r\n\ @version\ 04/07/2023\r\n
 comment1.params=puntaje\ max
 comment1.target=Win(int,\ int)
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ Win.\r\n\ Prepara\ la\ pantalla\ de\ victoria\ y\ muestra\ el\ puntaje\ obtenido.\r\n\ \r\n\ @param\ puntaje\ Puntaje\ obtenido\r\n\ @param\ max\ Puntaje\ m\u00E1ximo\ posible\r\n
 comment2.params=
 comment2.target=void\ prepare()
+comment2.text=\r\n\ M\u00E9todo\ que\ prepara\ la\ pantalla\ de\ victoria.\r\n\ Crea\ y\ a\u00F1ade\ los\ elementos\ necesarios\ a\ la\ pantalla.\r\n
 comment3.params=
 comment3.target=void\ act()
+comment3.text=\r\n\ M\u00E9todo\ act\ que\ se\ ejecuta\ en\ cada\ ciclo\ del\ juego.\r\n\ Verifica\ si\ se\ ha\ hecho\ clic\ en\ el\ bot\u00F3n\ de\ salir.\r\n\ Si\ se\ ha\ hecho\ clic,\ detiene\ la\ m\u00FAsica\ y\ regresa\ al\ men\u00FA\ principal.\r\n
 numComments=4

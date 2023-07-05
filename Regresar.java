@@ -1,19 +1,23 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Regresar here.
+ * La clase Regresar representa un botón para volver atrás en la interfaz del juego.
+ * Extiende la clase Button, lo que significa que es un Actor interactivo que puede ser
+ * colocado en el mundo y responder a eventos del mouse.
+ * Cuando se crea una instancia de Regresar, se configura su imagen para mostrar "return.png".
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Nota: Esta clase define el comportamiento del botón de regreso en la interfaz.
+ * 
+ * @author Noe Cisneros
+ * @version 28/06/2023
  */
-public class Regresar extends Button
-{
+public class Regresar extends Button{
     /**
-     * Act - do whatever the Regresar wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Realiza las acciones correspondientes al botón de regreso.
+     * Este método se llama automáticamente en cada ciclo del juego.
+     * En esta implementación, el método establece la imagen del botón para mostrar "return.png".
      */
-    public void act()
-    {
+    public void act(){
         GreenfootImage imagen = new GreenfootImage("return.png");
         setImage(imagen);
     }

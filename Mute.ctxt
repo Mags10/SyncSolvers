@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=Mute
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Mute\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ La\ clase\ Mute\ representa\ un\ bot\u00F3n\ de\ silencio\ (mute).\r\n\ Extiende\ la\ clase\ Button,\ lo\ que\ significa\ que\ es\ un\ Actor\ interactivo\ que\ puede\ ser\r\n\ colocado\ en\ el\ mundo\ y\ responder\ a\ eventos\ del\ mouse.\r\n\ Cuando\ se\ presiona\ el\ bot\u00F3n,\ se\ actualiza\ su\ imagen\ para\ mostrar\ "mute.png"\ y\ se\ escala\r\n\ la\ imagen\ al\ doble\ del\ tama\u00F1o\ original.\r\n\ \r\n\ Nota\:\ Esta\ clase\ define\ el\ comportamiento\ del\ bot\u00F3n\ de\ silencio\ en\ la\ interfaz\ del\ juego.\r\n\ \r\n\ @author\ Noe\ Cisneros\r\n\ @version\ 28/06/2023\r\n
 comment1.params=
 comment1.target=void\ act()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Mute\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment1.text=\r\n\ Realiza\ las\ acciones\ correspondientes\ al\ bot\u00F3n\ de\ silencio\ (mute).\r\n\ Este\ m\u00E9todo\ es\ llamado\ autom\u00E1ticamente\ en\ cada\ ciclo\ del\ juego.\r\n\ Actualiza\ la\ imagen\ del\ bot\u00F3n\ para\ mostrar\ la\ imagen\ "mute.png"\ y\ la\ escala\ al\r\n\ doble\ del\ tama\u00F1o\ original.\r\n
 numComments=2

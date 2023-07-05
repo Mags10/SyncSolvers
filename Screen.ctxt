@@ -1,6 +1,7 @@
 #BlueJ class context
 comment0.target=Screen
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Screen\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Clase\ Screen\:\ representa\ una\ pantalla\ en\ el\ juego.\r\n\ Extiende\ la\ clase\ World.\r\n\ \r\n\ @author\ Miguel\ Gtz\r\n\ @version\ 29/06/2023\r\n
 comment1.params=
 comment1.target=Screen()
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ Screen.\r\n\ Crea\ una\ nueva\ pantalla\ con\ el\ ancho\ y\ alto\ especificados.\r\n
 numComments=2

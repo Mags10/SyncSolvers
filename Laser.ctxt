@@ -1,11 +1,12 @@
 #BlueJ class context
 comment0.target=Laser
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Laser\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ La\ clase\ Laser\ representa\ un\ l\u00E1ser\ en\ el\ escenario.\r\n\ Extiende\ la\ clase\ Scenary\ y\ se\ utiliza\ para\ crear\ l\u00E1seres\ con\ diferentes\ alturas\ y\ colores.\r\n\ Los\ l\u00E1seres\ pueden\ cambiar\ su\ estado\ de\ abierto\ a\ cerrado\ y\ viceversa.\r\n\ \r\n\ @autor\ Miguel\ Gtz\r\n\ @version\ 02/07/2023\r\n
 comment1.params=height\ color
 comment1.target=Laser(int,\ java.lang.String)
+comment1.text=\r\n\ Crea\ un\ l\u00E1ser\ con\ una\ altura\ y\ color\ especificados.\r\n\ \r\n\ @param\ height\ La\ altura\ del\ l\u00E1ser.\r\n\ @param\ color\ El\ color\ del\ l\u00E1ser.\r\n
 comment2.params=
 comment2.target=void\ act()
-comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ Laser\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment2.text=\r\n\ Realiza\ las\ acciones\ del\ l\u00E1ser\ en\ el\ escenario.\r\n\ Este\ m\u00E9todo\ se\ llama\ cada\ vez\ que\ se\ presiona\ el\ bot\u00F3n\ "Act"\ o\ "Run"\ en\ el\ entorno.\r\n
 comment3.params=
 comment3.target=void\ changeState()
 numComments=4

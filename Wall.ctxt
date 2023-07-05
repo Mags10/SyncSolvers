@@ -1,13 +1,15 @@
 #BlueJ class context
 comment0.target=Wall
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Wall\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ La\ clase\ Wall\ representa\ una\ pared\ en\ el\ escenario.\r\n\ Extiende\ la\ clase\ Scenary\ y\ se\ utiliza\ para\ crear\ objetos\ de\ tipo\ pared.\r\n\ Una\ pared\ puede\ tener\ una\ colisi\u00F3n\ a\ la\ izquierda\ o\ no,\ dependiendo\ de\ su\ orientaci\u00F3n.\r\n\ \r\n\ @autor\ Miguel\ Gtz\r\n\ @version\ 02/07/2023\r\n
 comment1.params=width\ height\ leftColition
 comment1.target=Wall(int,\ int,\ boolean)
+comment1.text=\r\n\ Crea\ una\ pared\ con\ un\ ancho\ y\ alto\ especificados,\ y\ una\ indicaci\u00F3n\ de\ colisi\u00F3n\ a\ la\ izquierda.\r\n\ \r\n\ @param\ width\ el\ ancho\ de\ la\ pared.\r\n\ @param\ height\ el\ alto\ de\ la\ pared.\r\n\ @param\ leftCollision\ indica\ si\ la\ pared\ tiene\ colisi\u00F3n\ a\ la\ izquierda.\r\n
 comment2.params=
 comment2.target=Wall()
+comment2.text=\r\n\ Crea\ una\ pared\ con\ un\ ancho\ predeterminado\ de\ 15\ y\ un\ alto\ de\ 200.\r\n\ No\ tiene\ colisi\u00F3n\ a\ la\ izquierda\ por\ defecto.\r\n
 comment3.params=
 comment3.target=boolean\ isLeftColition()
+comment3.text=\r\n\ Verifica\ si\ la\ pared\ tiene\ colisi\u00F3n\ a\ la\ izquierda.\r\n\ \r\n\ @return\ true\ si\ la\ pared\ tiene\ colisi\u00F3n\ a\ la\ izquierda,\ false\ de\ lo\ contrario.\r\n
 comment4.params=
 comment4.target=void\ act()
-comment4.text=\r\n\ Act\ -\ do\ whatever\ the\ Wall\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 numComments=5

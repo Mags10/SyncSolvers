@@ -1,17 +1,23 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.Timer;
 
+
 /**
- * Write a description of class WinS here.
+ * La clase WinS representa la animación de la pantalla de victoria.
+ * Extiende la clase Actor y se utiliza para mostrar una secuencia de imágenes que forman la animación de victoria.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Noe Cisneros
+ * @version 03/07/2023
  */
 public class WinS extends Actor
 {
     private GreenfootImage[] imagenes;  // Variable para almacenar las imágenes
     private int indiceImagen;  // Variable para controlar el índice de la imagen actual
     private Timer timer;
+    /**
+     * Constructor de la clase WinS.
+     * Inicializa la lista de imágenes y establece la primera imagen como la imagen actual.
+     */
     public WinS(){
         timer = new Timer();
         // Inicializa la lista de imágenes y el índice
@@ -27,6 +33,10 @@ public class WinS extends Actor
         indiceImagen = 0;  // Índice inicial
         setImage(imagenes[indiceImagen]);
     }
+    /**
+     * Realiza una acción en cada iteración del ciclo de juego.
+     * Cambia la imagen en cada iteración para crear la animación de victoria.
+     */
     public void act()
     {
         try {

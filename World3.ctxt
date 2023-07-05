@@ -1,8 +1,10 @@
 #BlueJ class context
 comment0.target=World3
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ World3\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Clase\ World3\:\ representa\ el\ mundo\ de\ selecci\u00F3n\ de\ niveles.\r\n\ Extiende\ la\ clase\ Screen.\r\n\ \r\n\ @author\ Noe\ Cisneros\r\n\ @version\ 30/06/2023\r\n
 comment1.params=s
 comment1.target=World3(greenfoot.GreenfootSound)
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ World3.\r\n\ Crea\ el\ mundo\ de\ selecci\u00F3n\ de\ niveles\ y\ asigna\ la\ m\u00FAsica.\r\n\ \r\n\ @param\ s\ M\u00FAsica\ de\ fondo\r\n
 comment2.params=
 comment2.target=void\ act()
+comment2.text=\r\n\ M\u00E9todo\ act\ que\ se\ ejecuta\ en\ cada\ ciclo\ del\ juego.\r\n\ Verifica\ si\ se\ ha\ hecho\ clic\ en\ alguno\ de\ los\ niveles\ o\ en\ el\ bot\u00F3n\ de\ regresar.\r\n\ Si\ se\ ha\ hecho\ clic\ en\ un\ nivel,\ detiene\ la\ m\u00FAsica\ y\ comienza\ ese\ nivel.\r\n\ Si\ se\ ha\ hecho\ clic\ en\ regresar,\ regresa\ al\ men\u00FA\ de\ submundos.\r\n
 numComments=3

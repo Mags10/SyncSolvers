@@ -1,16 +1,27 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Laser here.
+ * La clase Laser representa un láser en el escenario.
+ * Extiende la clase Scenary y se utiliza para crear láseres con diferentes alturas y colores.
+ * Los láseres pueden cambiar su estado de abierto a cerrado y viceversa.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @autor Miguel Gtz
+ * @version 02/07/2023
  */
-public class Laser extends Scenary
-{
+public class Laser extends Scenary{
+    
     private Sprite laser, top, button;
     private Wall left, right;
+    private boolean drawed = false;
+    private boolean isOpened = false;
+    private boolean drawOpened = false;
     
+    /**
+     * Crea un láser con una altura y color especificados.
+     * 
+     * @param height La altura del láser.
+     * @param color El color del láser.
+     */
     Laser(int height, String color){
         super(24, height);
         GreenfootImage ls = new GreenfootImage(color + "laser.png");
@@ -28,14 +39,9 @@ public class Laser extends Scenary
         this.right = new Wall(1, height, false);
     }
     
-    private boolean drawed = false;
-    
-    private boolean isOpened = false;
-    private boolean drawOpened = false;
-    
     /**
-     * Act - do whatever the Laser wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Realiza las acciones del láser en el escenario.
+     * Este método se llama cada vez que se presiona el botón "Act" o "Run" en el entorno.
      */
     public void act()
     {
@@ -63,6 +69,9 @@ public class Laser extends Scenary
         }
     }
     
+    /**
+     * Cambia el estado del láser de abierto a cerrado y viceversa.
+     */
     public void changeState(){
         this.isOpened = !this.isOpened;
         this.drawOpened = false;

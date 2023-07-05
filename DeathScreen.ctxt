@@ -1,12 +1,16 @@
 #BlueJ class context
 comment0.target=DeathScreen
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ DeathScreen\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Clase\ DeathScreen\:\ representa\ la\ pantalla\ de\ muerte\ en\ el\ juego.\r\n\ Extiende\ la\ clase\ Screen.\r\n\ \r\n\ @author\ Noe\ Cisneros\r\n\ @version\ 02/07/2023\r\n
 comment1.params=
 comment1.target=DeathScreen()
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ DeathScreen\ sin\ par\u00E1metros.\r\n\ Prepara\ la\ pantalla\ de\ muerte.\r\n
 comment2.params=tmp\ dificulty
 comment2.target=DeathScreen(Level,\ int)
+comment2.text=\r\n\ Constructor\ de\ la\ clase\ DeathScreen\ con\ par\u00E1metros.\r\n\ Prepara\ la\ pantalla\ de\ muerte\ con\ el\ nivel\ y\ dificultad\ especificados.\r\n\ \r\n\ @param\ tmp\ \ \ \ \ \ \ Nivel\r\n\ @param\ dificulty\ Dificultad\r\n
 comment3.params=
 comment3.target=void\ prepare()
+comment3.text=\r\n\ M\u00E9todo\ para\ preparar\ la\ pantalla\ de\ muerte.\r\n\ Crea\ y\ agrega\ los\ actores\ necesarios\ a\ la\ pantalla.\r\n\ Inicia\ la\ reproducci\u00F3n\ de\ la\ m\u00FAsica\ de\ fondo.\r\n
 comment4.params=
 comment4.target=void\ act()
+comment4.text=\r\n\ M\u00E9todo\ act\ que\ se\ ejecuta\ en\ cada\ ciclo\ del\ juego.\r\n\ Verifica\ si\ se\ ha\ hecho\ clic\ en\ los\ actores\ de\ salir\ o\ volver\ a\ intentar.\r\n\ Realiza\ las\ acciones\ correspondientes\ seg\u00FAn\ la\ opci\u00F3n\ seleccionada.\r\n
 numComments=5

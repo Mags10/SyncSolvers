@@ -1,20 +1,21 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
+
 /**
- * Write a description of class ButtonPlay here.
+ * Clase ButtonPlay: representa un botón de reproducción en el escenario.
+ * Extiende la clase Button.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Noe Cisneros
+ * @version 28/06/2023
  */
-public class ButtonPlay extends Button
-{
+public class ButtonPlay extends Button{
     /**
-     * Act - do whatever the ButtonPlay wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Act - realiza las acciones que el botón de reproducción desea hacer. Este método se llama siempre que
+     * se presiona el botón "Act" o "Run" en el entorno.
      */
-    public void act()
-    {
+    public void act(){
         GreenfootImage imagen = new GreenfootImage("play.png");
         setImage(imagen);
     }
+
 }

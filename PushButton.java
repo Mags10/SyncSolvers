@@ -1,10 +1,13 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class PushButton here.
+ * La clase PushButton representa un botón en el escenario.
+ * Extiende la clase Scenary y se utiliza para crear botones que pueden ser pulsados.
+ * Cuando se presiona el botón, cambia su estado y activa o desactiva un láser asociado.
+ * El botón tiene una textura que cambia cuando se presiona.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @autor Miguel Gtz
+ * @version 02/07/2023
  */
 public class PushButton extends Scenary
 {
@@ -14,6 +17,13 @@ public class PushButton extends Scenary
     private Laser asoc;
     private String color;
     
+    /**
+     * Crea un botón con un láser asociado y un color especificado.
+     * El botón tiene una textura que cambia cuando se presiona.
+     * 
+     * @param asoc el láser asociado al botón.
+     * @param color el color del botón.
+     */
     PushButton(Laser asoc, String color){
         super(24, 24);
         this.asoc = asoc;
@@ -22,8 +32,8 @@ public class PushButton extends Scenary
         this.btn = new Sprite(ls, this, 1, true);
     }
     /**
-     * Act - do whatever the PushButton wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Realiza las acciones del botón en el escenario.
+     * Este método se llama cada vez que se presiona el botón 'Act' o 'Run' en el entorno.
      */
     public void act(){
         if(!drawed){
@@ -31,7 +41,11 @@ public class PushButton extends Scenary
             this.drawed = true;
         }
     }
-    
+    /**
+     * Presiona el botón.
+     * Cambia el estado del botón y activa o desactiva el láser asociado.
+     * La textura del botón también cambia para indicar que ha sido presionado.
+     */
     public void push(){
         this.state = !this.state;
         this.asoc.changeState();

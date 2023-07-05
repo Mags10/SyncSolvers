@@ -1,16 +1,22 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Lvl2 here.
+ * Clase Lvl2: representa el primer nivel del juego.
+ * Extiende la clase Level.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Noe & Miguel
+ * @version 04/07/2023
  */
-public class Lvl2 extends Level
-{
+public class Lvl2 extends Level{
+    
     private GreenfootSound music;
-    public Lvl2(int d)
-    {    
+    /**
+     * Constructor de la clase Lvl2.
+     * Crea un nuevo nivel con el ancho y alto especificados, el fondo dado y la dificultad dada.
+     * 
+     * @param d La dificultad del nivel.
+     */
+    public Lvl2(int d){    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(2000, 1200, 2, new GreenfootImage("Map003.png"), d);
         prepare();
@@ -18,8 +24,11 @@ public class Lvl2 extends Level
         music.setVolume(18);
         music.playLoop();
     }
-    public Lvl2()
-    {    
+    /**
+     * Constructor de la clase Lvl2.
+     * Crea un nuevo nivel con el ancho y alto especificados, el fondo dado y la dificultad predeterminada.
+     */
+    public Lvl2(){    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(2000, 1200, 2, new GreenfootImage("Map003.png"),1);
         prepare();
@@ -27,10 +36,17 @@ public class Lvl2 extends Level
         music.setVolume(18);
         music.playLoop();
     }
+    /**
+     * Obtiene la música del nivel.
+     * 
+     * @return El objeto GreenfootSound que representa la música del nivel.
+     */
     public GreenfootSound getMusic(){
         return music;
     }
-    
+    /**
+     * Prepara el nivel colocando los objetos y jugadores en posiciones iniciales.
+     */
     private void prepare(){
         Player player = new Player();
         addObject(player,62,25);

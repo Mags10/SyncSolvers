@@ -1,13 +1,16 @@
 #BlueJ class context
 comment0.target=Orb
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Orb\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ La\ clase\ Orb\ representa\ un\ orbe\ en\ el\ escenario.\r\n\ Extiende\ la\ clase\ Scenary\ y\ se\ utiliza\ para\ crear\ orbes\ con\ una\ textura\ giratoria.\r\n\ Los\ orbes\ pueden\ tener\ diferentes\ tama\u00F1os\ seg\u00FAn\ el\ constructor\ utilizado.\r\n\ \r\n\ @autor\ Miguel\ Gtz\r\n\ @version\ 02/07/2023\r\n
 comment1.params=
 comment1.target=Orb()
+comment1.text=\r\n\ Crea\ un\ orbe\ con\ un\ tama\u00F1o\ predeterminado\ de\ 24x24\ p\u00EDxeles.\r\n\ El\ orbe\ tiene\ una\ textura\ giratoria.\r\n
 comment2.params=
 comment2.target=void\ act()
-comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ Orb\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment2.text=\r\n\ Realiza\ las\ acciones\ del\ orbe\ en\ el\ escenario.\r\n\ Este\ m\u00E9todo\ se\ llama\ cada\ vez\ que\ se\ presiona\ el\ bot\u00F3n\ 'Act'\ o\ 'Run'\ en\ el\ entorno.\r\n
 comment3.params=
 comment3.target=void\ delete()
+comment3.text=\r\n\ Elimina\ el\ orbe\ del\ escenario.\r\n\ El\ orbe\ se\ vuelve\ invisible\ y\ deja\ de\ actuar.\r\n
 comment4.params=
 comment4.target=boolean\ validPoint()
+comment4.text=\r\n\ Verifica\ si\ el\ orbe\ es\ v\u00E1lido.\r\n\ Un\ orbe\ es\ v\u00E1lido\ si\ sigue\ activo\ y\ visible\ en\ el\ escenario.\r\n\ \r\n\ @return\ true\ si\ el\ orbe\ es\ v\u00E1lido,\ false\ de\ lo\ contrario.\r\n
 numComments=5

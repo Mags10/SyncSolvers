@@ -2,16 +2,26 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.Timer;
 
 /**
- * Write a description of class deathsc here.
+ * La clase DeathSC representa un Actor que muestra una secuencia de imágenes en un bucle,
+ * creando una animación de muerte. Cada cierto tiempo, cambia la imagen mostrada para
+ * mostrar la siguiente imagen en la secuencia.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Nota: Esta clase define la animación de muerte para un personaje en el juego.
+ * 
+ * @autor Noe Cisneros
+ * @version 03/07/2023
  */
-public class DeathSC extends Actor
-{
+public class DeathSC extends Actor{
+    
     private GreenfootImage[] imagenes;  // Variable para almacenar las imágenes
     private int indiceImagen;  // Variable para controlar el índice de la imagen actual
     private Timer timer;
+    
+    /**
+     * Crea una instancia de DeathSC.
+     * Configura la lista de imágenes con las diferentes imágenes de la secuencia de muerte
+     * y establece la primera imagen como la imagen inicial del actor.
+     */
     public DeathSC(){
         timer = new Timer();
         // Inicializa la lista de imágenes y el índice
@@ -33,8 +43,12 @@ public class DeathSC extends Actor
         indiceImagen = 0;  // Índice inicial
         setImage(imagenes[indiceImagen]);
     }
-    public void act()
-    {
+    /**
+     * Define el comportamiento de la animación de muerte.
+     * En cada iteración, cambia la imagen mostrada para mostrar la siguiente imagen en la secuencia.
+     * El cambio de imagen ocurre cada 0.5 segundos (500 milisegundos).
+     */
+    public void act(){
         try {
             Thread.sleep(500); // Espera .9 segundos (900 milisegundos)
         } catch (InterruptedException e) {

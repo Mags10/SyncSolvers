@@ -1,11 +1,13 @@
 #BlueJ class context
 comment0.target=PushButton
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ PushButton\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ La\ clase\ PushButton\ representa\ un\ bot\u00F3n\ en\ el\ escenario.\r\n\ Extiende\ la\ clase\ Scenary\ y\ se\ utiliza\ para\ crear\ botones\ que\ pueden\ ser\ pulsados.\r\n\ Cuando\ se\ presiona\ el\ bot\u00F3n,\ cambia\ su\ estado\ y\ activa\ o\ desactiva\ un\ l\u00E1ser\ asociado.\r\n\ El\ bot\u00F3n\ tiene\ una\ textura\ que\ cambia\ cuando\ se\ presiona.\r\n\ \r\n\ @autor\ Miguel\ Gtz\r\n\ @version\ 02/07/2023\r\n
 comment1.params=asoc\ color
 comment1.target=PushButton(Laser,\ java.lang.String)
+comment1.text=\r\n\ Crea\ un\ bot\u00F3n\ con\ un\ l\u00E1ser\ asociado\ y\ un\ color\ especificado.\r\n\ El\ bot\u00F3n\ tiene\ una\ textura\ que\ cambia\ cuando\ se\ presiona.\r\n\ \r\n\ @param\ asoc\ el\ l\u00E1ser\ asociado\ al\ bot\u00F3n.\r\n\ @param\ color\ el\ color\ del\ bot\u00F3n.\r\n
 comment2.params=
 comment2.target=void\ act()
-comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ PushButton\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment2.text=\r\n\ Realiza\ las\ acciones\ del\ bot\u00F3n\ en\ el\ escenario.\r\n\ Este\ m\u00E9todo\ se\ llama\ cada\ vez\ que\ se\ presiona\ el\ bot\u00F3n\ 'Act'\ o\ 'Run'\ en\ el\ entorno.\r\n
 comment3.params=
 comment3.target=void\ push()
+comment3.text=\r\n\ Presiona\ el\ bot\u00F3n.\r\n\ Cambia\ el\ estado\ del\ bot\u00F3n\ y\ activa\ o\ desactiva\ el\ l\u00E1ser\ asociado.\r\n\ La\ textura\ del\ bot\u00F3n\ tambi\u00E9n\ cambia\ para\ indicar\ que\ ha\ sido\ presionado.\r\n
 numComments=4

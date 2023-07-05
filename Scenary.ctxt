@@ -1,10 +1,12 @@
 #BlueJ class context
 comment0.target=Scenary
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Scenary\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ La\ clase\ Scenary\ representa\ un\ elemento\ del\ escenario\ en\ el\ juego.\r\n\ Puede\ ser\ utilizado\ para\ crear\ fondos,\ obst\u00E1culos,\ decoraciones\ u\ otros\ elementos\ del\ escenario.\r\n\ Extiende\ la\ clase\ Entity,\ que\ proporciona\ la\ funcionalidad\ b\u00E1sica\ de\ un\ objeto\ en\ el\ juego.\r\n\ \r\n\ @autor\ Miguel\ Gtz\r\n\ @version\ 28/06/2023\r\n
 comment1.params=width\ height
 comment1.target=Scenary(int,\ int)
+comment1.text=\r\n\ Crea\ un\ objeto\ Scenary\ con\ el\ ancho\ y\ alto\ especificados.\r\n\r\n\ @param\ width\ El\ ancho\ del\ objeto\ Scenary.\r\n\ @param\ height\ La\ altura\ del\ objeto\ Scenary.\r\n
 comment2.params=width
 comment2.target=Scenary(int)
+comment2.text=\r\n\ Crea\ un\ objeto\ Scenary\ con\ el\ ancho\ y\ alto\ iguales.\r\n\r\n\ @param\ size\ El\ ancho\ y\ alto\ del\ objeto\ Scenary.\r\n
 comment3.params=
 comment3.target=void\ act()
 numComments=4

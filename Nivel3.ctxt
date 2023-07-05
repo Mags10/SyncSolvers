@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=Nivel3
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Nivel3\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ La\ clase\ Nivel1\ representa\ un\ bot\u00F3n\ para\ seleccionar\ el\ nivel\ 3.\r\n\ Extiende\ la\ clase\ Button,\ lo\ que\ significa\ que\ es\ un\ Actor\ interactivo\ que\ puede\ ser\r\n\ colocado\ en\ el\ mundo\ y\ responder\ a\ eventos\ del\ mouse.\r\n\ Cuando\ se\ presiona\ el\ bot\u00F3n,\ se\ actualiza\ su\ imagen\ para\ mostrar\ "nivel\ 3.png".\r\n\ \r\n\ Nota\:\ Esta\ clase\ define\ el\ comportamiento\ del\ bot\u00F3n\ de\ selecci\u00F3n\ del\ nivel\ 3\ en\ la\ interfaz\ del\ juego.\r\n\ \r\n\ @author\ Noe\ Cisneros\r\n\ @version\ 28/06/2023\r\n
 comment1.params=
 comment1.target=void\ act()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Nivel3\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment1.text=\r\n\ Realiza\ las\ acciones\ correspondientes\ al\ bot\u00F3n\ de\ selecci\u00F3n\ del\ nivel\ 3.\r\n\ Este\ m\u00E9todo\ es\ llamado\ autom\u00E1ticamente\ en\ cada\ ciclo\ del\ juego.\r\n\ Actualiza\ la\ imagen\ del\ bot\u00F3n\ para\ mostrar\ la\ imagen\ "nivel\ 3.png".\r\n
 numComments=2

@@ -1,19 +1,22 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class TituloJuego here.
+ * La clase TituloJuego representa un actor que muestra el título del juego.
+ * Extiende la clase Button, lo que significa que es un Actor interactivo que puede ser
+ * colocado en el mundo y responder a eventos del mouse.
+ * Cuando se crea una instancia de TituloJuego, se configura su imagen para mostrar "titulojuego.png".
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Nota: Esta clase define la apariencia del título del juego en la interfaz.
+ * 
+ * @autor Noe Cisneros
+ * @version 29/06/2023
  */
-public class TituloJuego extends Button
-{
+public class TituloJuego extends Button{
     /**
-     * Act - do whatever the TituloJuego wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Define el comportamiento del título del juego.
+     * Configura la imagen del actor para mostrar "titulojuego.png".
      */
-    public void act()
-    {
+    public void act(){
         GreenfootImage imagen = new GreenfootImage("titulojuego.png");
         setImage(imagen);
     }

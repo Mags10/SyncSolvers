@@ -1,12 +1,16 @@
 #BlueJ class context
 comment0.target=Lvl4
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Lvl4\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Clase\ Lvl4\:\ representa\ el\ primer\ nivel\ del\ juego.\r\n\ Extiende\ la\ clase\ Level.\r\n\ \r\n\ @author\ Noe\ &\ Miguel\r\n\ @version\ 04/07/2023\r\n
 comment1.params=d
 comment1.target=Lvl4(int)
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ Lvl4.\r\n\ Crea\ un\ nuevo\ nivel\ con\ el\ ancho\ y\ alto\ especificados,\ el\ fondo\ dado\ y\ la\ dificultad\ dada.\r\n\ \r\n\ @param\ d\ La\ dificultad\ del\ nivel.\r\n
 comment2.params=
 comment2.target=Lvl4()
+comment2.text=\r\n\ Constructor\ de\ la\ clase\ Lvl4.\r\n\ Crea\ un\ nuevo\ nivel\ con\ el\ ancho\ y\ alto\ especificados,\ el\ fondo\ dado\ y\ la\ dificultad\ predeterminada.\r\n
 comment3.params=
 comment3.target=greenfoot.GreenfootSound\ getMusic()
+comment3.text=\r\n\ Obtiene\ la\ m\u00FAsica\ del\ nivel.\r\n\ \r\n\ @return\ El\ objeto\ GreenfootSound\ que\ representa\ la\ m\u00FAsica\ del\ nivel.\r\n
 comment4.params=
 comment4.target=void\ prepare()
+comment4.text=\r\n\ Prepara\ el\ nivel\ colocando\ los\ objetos\ y\ jugadores\ en\ posiciones\ iniciales.\r\n
 numComments=5

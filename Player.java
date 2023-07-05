@@ -3,6 +3,15 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Timer;
 
+/**
+ * La clase Player representa al jugador del juego.
+ * Extiende la clase Entity, ya que es un objeto que se mueve en el mundo del juego.
+ * Contiene métodos para controlar el movimiento, salto, colisiones, indicadores y efectos del jugador.
+ * 
+ * @autor Miguel Gtz
+ * @version 03/07/2023
+ */
+
 public class Player extends Entity {
     private static final int horizontalSpeed = 5;
     private static final int gravity = 1;
@@ -18,18 +27,51 @@ public class Player extends Entity {
     private int canChangeCamera = 10;
     private int contChangeCamera = 0;
     private Sprite indicator;
-    
     private Sprite[] itemIndicators;
+    private int countAnim2 = 12;
+    private int stepAnim2 = 20;
+    private int currentStepAnim2 = 0;
+    private boolean frameset = false;
+    private int val;
+    private int countAnim3 = 12;
+    private int stepAnim3 = 20;
+    private int currentStepAnim3 = 0;
+    private boolean isDamaged = false;
+    private int activeButton = 0;
+    private boolean canPress = true;
+    private boolean checkFinish = true;
+    private int countAnim = 16;
+    private int stepAnim = 6;
+    private int currentStepAnim = 0;
+    private int countDamage = 100;
+    private int stepDamage = 0;
+    private int numFlashes = 5;
+    private double currentTransparency = 1;
+    private boolean countUp = false;
+    private int countAnim4 = 0;
+    private int stepAnim4 = 2;
+    private int currentStepAnim4 = 11;
+    private boolean framekey = false;
+    private boolean band = false;
+    private int maxOffset = 25;
+    private int StepOfset = 2;
+    private boolean keyFrameIndicator = false;
+    private int contFrameIndicator = 0;
     
-    
+    /**
+     * Constructor de la clase Player.
+     * Crea un nuevo jugador con una imagen predeterminada y asigna el controlador de cámara seguidora.
+     */
     Player(){
         super(new GreenfootImage("Capa 4.png"), 20, 1, false);
         this.camCtrl = new FollowerCam(this, 80, -80);
         this.indicator = new Sprite(new GreenfootImage("indicatorPlayer.png"), this, 0.7);
-        
-        
     }
 
+    /**
+     * El método act se llama automáticamente en cada acto del escenario.
+     * Controla el movimiento, salto, colisiones, indicadores y efectos del jugador.
+     */
     public void act() {
         if (!isDrawed) {
             this.drawFollower();
@@ -52,16 +94,11 @@ public class Player extends Entity {
         contChangeCamera++;
     }
     
-    private int countAnim2 = 12;
-    private int stepAnim2 = 20;
-    private int currentStepAnim2 = 0;
-    private boolean frameset = false;
-    private int val;
-    
-    private int countAnim3 = 12;
-    private int stepAnim3 = 20;
-    private int currentStepAnim3 = 0;
-    
+    /**
+     * Aplica la gravedad al jugador.
+     * Si el jugador no está en el suelo, la velocidad vertical se incrementa debido a la gravedad.
+     * También controla el salto del jugador y su animación.
+     */
     private void applyGravity() {
         if (!inGround) {
             verticalSpeed += gravity;
@@ -87,6 +124,9 @@ public class Player extends Entity {
         fallingSprite();
     }
     
+    /**
+     * Verifica si el jugador puede realizar un salto y lo ejecuta cuando se pulsa la tecla "up".
+     */
     private void checkJump() {
         if (Greenfoot.isKeyDown("up") && inGround) {
             jumpCont = maxJumpHeight;
@@ -96,6 +136,10 @@ public class Player extends Entity {
         }
     }
     
+    /**
+     * Maneja el movimiento del jugador en función de las teclas presionadas.
+     * Además, permite cambiar entre jugadores mediante las teclas "z" y "x".
+     */
     private void handleMovement() {
         int dx = 0;
         if (Greenfoot.isKeyDown("left")) {
@@ -117,12 +161,10 @@ public class Player extends Entity {
         }
         setLocation(getX() + dx, getY());
     }
-    
-    private boolean isDamaged = false;
-    private int activeButton = 0;
-    private boolean canPress = true;
-    private boolean checkFinish = true;
-    
+        
+    /**
+     * Maneja las colisiones del jugador con diferentes tipos de objetos en el mundo del juego.
+     */
     private void handleCollision() {
         if(!canPress){
             activeButton += 1;
@@ -220,15 +262,18 @@ public class Player extends Entity {
         }
     }
     
+    /**
+     * Verifica si el jugador ha tocado el objeto de finalización del nivel.
+     * @return true si el jugador ha tocado el objeto de finalización, de lo contrario, false.
+     */
     public boolean checkFinishTouch(){
         Entity bk = (Entity) getOneIntersectingObject(Finish.class);
         return bk != null;
     }
 
-    private int countAnim = 16;
-    private int stepAnim = 6;
-    private int currentStepAnim = 0;
-    
+    /**
+     * Cambia la imagen del jugador para mostrar el paso de la animación de movimiento.
+     */
     private void changeSprite(){
         if(verticalSpeed == 0){
             currentStepAnim++;
@@ -246,12 +291,11 @@ public class Player extends Entity {
         
     }
     
-    private int countDamage = 100;
-    private int stepDamage = 0;
-    private int numFlashes = 5;
-    private double currentTransparency = 1;
-    private boolean countUp = false;
-    
+    /**
+     * Maneja el daño recibido por el jugador y controla la transparencia de la textura del jugador durante el daño.
+     * Si el jugador está dañado, se ajusta la transparencia de la textura y se actualiza el indicador visual.
+     * Cuando se completa el proceso de daño, se restablece la transparencia y se actualiza el indicador visual.
+     */
     private void handleDamage(){
         if(isDamaged){
             stepDamage++;
@@ -278,12 +322,11 @@ public class Player extends Entity {
         }
     }
     
-    private int countAnim4 = 0;
-    private int stepAnim4 = 2;
-    private int currentStepAnim4 = 11;
-    private boolean framekey = false;
-    private boolean band = false;
-    
+    /**
+     * Cambia la imagen de la textura del jugador para mostrar la animación de caída.
+     * Si la velocidad vertical del jugador no es cero, se establece la imagen correspondiente a la caída.
+     * Si la animación de caída está en curso, se actualiza la imagen en función del contador de animación.
+     */
     private void fallingSprite(){
         if(verticalSpeed != 0){
             GreenfootImage img = new GreenfootImage("Capa 13.png");
@@ -309,13 +352,21 @@ public class Player extends Entity {
         }
     }
     
+    /**
+     * Dibuja el controlador de cámara seguidora en el mundo del juego.
+     * Agrega el controlador de cámara seguidora al mundo del juego para que siga al jugador.
+     */
     private void drawFollower(){
         this.getWorld().addObject(this.camCtrl, 0, 0);
     }
     
-    private int maxOffset = 25;
-    private int StepOfset = 2;
-    
+    /**
+     * Controla el movimiento del controlador de cámara seguidora en función de las teclas presionadas.
+     * Si se presiona la tecla "left", se modifica el desplazamiento horizontal del controlador de cámara seguidora.
+     * Si se presiona la tecla "right", se modifica el desplazamiento horizontal del controlador de cámara seguidora.
+     * Si la velocidad vertical del jugador no es cero, se modifica el desplazamiento vertical del controlador de cámara seguidora.
+     * Si no se presiona ninguna tecla y la velocidad vertical del jugador es cero, el controlador de cámara seguidora se mueve hacia la posición original.
+     */
     private void handleFollower(){
         if (Greenfoot.isKeyDown("left")) {
             this.camCtrl.modifyCameraXOfset(StepOfset, maxOffset);
@@ -328,11 +379,21 @@ public class Player extends Entity {
         }
     }
 
+    /**
+     * Inicializa la cámara del juego.
+     * Establece el controlador de cámara seguidora como la cámara del mundo del juego.
+     */
     private void initializeCamera(){
         this.contChangeCamera = 0;
         ((Level)getWorld()).setCamera(this.camCtrl);
     }
     
+    /**
+     * Cambia el jugador actual por otro jugador.
+     * Muestra una transición de cambio al nuevo jugador, actualiza el indicador visual y restablece la cámara.
+     *
+     * @param p El nuevo jugador que se seleccionará.
+     */
     public void changeToPlayer(Player p){
         Timer timer = new Timer();
         this.isSelected = false;
@@ -343,6 +404,12 @@ public class Player extends Entity {
         this.camCtrl.goToOriginalOfset();
     }
     
+    /**
+     * Establece si el jugador está seleccionado o no.
+     * Si el jugador está seleccionado, se muestra el indicador visual en el mundo del juego.
+     *
+     * @param selected Valor booleano que indica si el jugador está seleccionado.
+     */
     public void setSelected(boolean selected){
         this.isSelected = selected;
         this.getWorld().addObject(this.indicator, 0, 0);
@@ -350,17 +417,28 @@ public class Player extends Entity {
         this.indicator.setOffset(0, -30);
     }
     
+    /**
+     * Obtiene el controlador de cámara seguidora asociado al jugador.
+     *
+     * @return El controlador de cámara seguidora asociado al jugador.
+     */
     public FollowerCam getCameraObjective(){
         return this.camCtrl;
     }
     
+    /**
+     * Verifica si la cámara del juego ha sido inicializada.
+     *
+     * @return true si la cámara del juego ha sido inicializada, false en caso contrario.
+     */
     public boolean cameraInitialized(){
         return this.isDrawed;
     }
     
-    private boolean keyFrameIndicator = false;
-    private int contFrameIndicator = 0;
-    
+    /**
+     * Controla el cambio de imagen del indicador visual del jugador.
+     * Se alterna entre dos imágenes de indicador cada 10 fotogramas.
+     */
     private void handleIndicator(){
         if(contFrameIndicator >= 10){
             if(this.keyFrameIndicator)

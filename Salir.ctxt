@@ -1,8 +1,9 @@
 #BlueJ class context
 comment0.target=Salir
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Salir\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ La\ clase\ Salir\ representa\ un\ bot\u00F3n\ para\ salir\ del\ juego.\r\n\ Extiende\ la\ clase\ Button,\ lo\ que\ significa\ que\ es\ un\ Actor\ interactivo\ que\ puede\ ser\r\n\ colocado\ en\ el\ mundo\ y\ responder\ a\ eventos\ del\ mouse.\r\n\ Cuando\ se\ crea\ una\ instancia\ de\ Salir,\ se\ configura\ su\ imagen\ para\ mostrar\ "Salir.png".\r\n\ \r\n\ Nota\:\ Esta\ clase\ define\ el\ comportamiento\ del\ bot\u00F3n\ de\ salida\ en\ la\ interfaz.\r\n\ \r\n\ @autor\ Noe\ Cisneros\r\n\ @version\ 29/06/2023\r\n
 comment1.params=
 comment1.target=Salir()
+comment1.text=\r\n\ Crea\ una\ instancia\ de\ Salir.\r\n\ Configura\ la\ imagen\ del\ bot\u00F3n\ para\ mostrar\ "Salir.png"\ y\ la\ escala\ al\ tama\u00F1o\ deseado.\r\n
 comment2.params=
 comment2.target=void\ act()
 numComments=3

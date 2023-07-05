@@ -1,8 +1,9 @@
 #BlueJ class context
 comment0.target=Finish
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Finish\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ La\ clase\ Finish\ representa\ un\ elemento\ de\ escenario\ que\ marca\ el\ final\ de\ un\ nivel\ o\ etapa\ del\ juego.\r\n\ Extiende\ la\ clase\ Scenary\ y\ agrega\ una\ textura\ animada.\r\n\ \r\n\ @author\ Miguel\ Gtz\r\n\ @version\ 02/07/2023\r\n
 comment1.params=
 comment1.target=Finish()
+comment1.text=\r\n\ Crea\ un\ elemento\ de\ finalizaci\u00F3n\ del\ nivel.\r\n\ El\ tama\u00F1o\ predeterminado\ del\ elemento\ es\ de\ 48x72\ p\u00EDxeles.\r\n
 comment2.params=
 comment2.target=void\ act()
 numComments=3

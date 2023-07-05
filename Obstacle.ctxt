@@ -1,11 +1,10 @@
 #BlueJ class context
 comment0.target=Obstacle
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Obstacle\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ La\ clase\ Obstacle\ representa\ un\ obst\u00E1culo\ en\ el\ escenario.\r\n\ Extiende\ la\ clase\ Scenary\ y\ se\ utiliza\ para\ crear\ obst\u00E1culos\ con\ diferentes\ tama\u00F1os.\r\n\ Los\ obst\u00E1culos\ pueden\ tener\ diferentes\ formas\ y\ dimensiones\ seg\u00FAn\ el\ constructor\ utilizado.\r\n\ \r\n\ @autor\ Miguel\ Gtz\r\n\ @version\ 02/07/2023\r\n
 comment1.params=
 comment1.target=Obstacle()
+comment1.text=\r\n\ Crea\ un\ obst\u00E1culo\ con\ un\ tama\u00F1o\ predeterminado.\r\n\ El\ tama\u00F1o\ predeterminado\ es\ de\ 8\ de\ ancho\ y\ 10\ de\ alto.\r\n
 comment2.params=i
 comment2.target=Obstacle(int)
-comment3.params=
-comment3.target=void\ act()
-comment3.text=\r\n\ Act\ -\ do\ whatever\ the\ Obstacle\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
-numComments=4
+comment2.text=\r\n\ Crea\ un\ obst\u00E1culo\ con\ un\ tama\u00F1o\ personalizado.\r\n\ \r\n\ @param\ i\ Un\ par\u00E1metro\ de\ ejemplo\ utilizado\ para\ definir\ el\ tama\u00F1o\ del\ obst\u00E1culo.\r\n
+numComments=3
