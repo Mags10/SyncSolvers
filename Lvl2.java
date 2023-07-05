@@ -12,7 +12,7 @@ public class Lvl2 extends Level
     public Lvl2(int d)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(2000, 1200, 1, new GreenfootImage("Map003.png"), d);
+        super(2000, 1200, 2, new GreenfootImage("Map003.png"), d);
         prepare();
         music = new GreenfootSound("GhostFight.mp3");
         music.setVolume(18);
@@ -21,7 +21,7 @@ public class Lvl2 extends Level
     public Lvl2()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(2000, 1200, 1, new GreenfootImage("Map003.png"),1);
+        super(2000, 1200, 2, new GreenfootImage("Map003.png"),1);
         prepare();
         music = new GreenfootSound("GhostFight.mp3");
         music.setVolume(18);
@@ -345,6 +345,8 @@ public class Lvl2 extends Level
         addObject(peak, 1308, 492);
         peak = new Obstacle();
         addObject(peak, 1356, 588);
+        peak = new Obstacle();
+        addObject(peak, 1332, 588);
         peak = new Obstacle();
         addObject(peak, 1356, 804);
         peak = new Obstacle();

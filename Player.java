@@ -23,7 +23,7 @@ public class Player extends Entity {
     
     
     Player(){
-        super(new GreenfootImage("Capa 4.png"), 20, 1, true);
+        super(new GreenfootImage("Capa 4.png"), 20, 1, false);
         this.camCtrl = new FollowerCam(this, 80, -80);
         this.indicator = new Sprite(new GreenfootImage("indicatorPlayer.png"), this, 0.7);
         
@@ -109,10 +109,10 @@ public class Player extends Entity {
             dx += horizontalSpeed;
             changeSprite();
         }
-        if (Greenfoot.isKeyDown("q") && canChangeCamera < contChangeCamera) {
+        if (Greenfoot.isKeyDown("z") && canChangeCamera < contChangeCamera) {
             ((Level)getWorld()).changePlayer(false);
         }
-        if (Greenfoot.isKeyDown("e") && canChangeCamera < contChangeCamera) {
+        if (Greenfoot.isKeyDown("x") && canChangeCamera < contChangeCamera) {
             ((Level)getWorld()).changePlayer(true);
         }
         setLocation(getX() + dx, getY());

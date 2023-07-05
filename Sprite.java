@@ -96,8 +96,17 @@ public class Sprite extends Actor
         this.setImage(this.imgLocal);
     }
     
+    private boolean onClick = false;
+    private IntroMenu toWorld;
+    
+    public void onClickToIntroMenu(){
+        this.onClick = true;
+        
+    }
+    
     public void act()
     {
+        
         // Add your action code here.
         if(this.asoc != null){
             if(this.fixedToButton){
@@ -109,6 +118,7 @@ public class Sprite extends Actor
         if(this.asocActor != null){
             setLocation(this.asocActor.getX() + this.dx, this.asocActor.getY() + this.dy);
         }
+        
             
     }
     

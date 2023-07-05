@@ -107,7 +107,22 @@ public class Level extends World
                 movy = (this.getHeight()/2 - movementFactorsY[i]/2) + (int)(movementFactorsY[i] * rely);
                 backgrounds[i].setLocation(movx, movy);
             }
-        }        
+        } 
+        if(Greenfoot.isKeyDown("b") ){
+            if(this instanceof Lvl1){
+                ((Lvl1)this).getMusic().stop();
+            }
+            if(this instanceof Lvl2){
+                ((Lvl2)this).getMusic().stop();
+            }
+            if(this instanceof Lvl3){
+                ((Lvl3)this).getMusic().stop();
+            }
+            if(this instanceof Lvl4){
+                ((Lvl4)this).getMusic().stop();
+            }
+            Greenfoot.setWorld(new IntroMenu());
+        }
     }
     
     public void drawLife(Actor a){
@@ -128,7 +143,7 @@ public class Level extends World
             this.orbText = new Sprite(new GreenfootImage("x" + this.score, 32, Color.WHITE, null), a, 1);
             addObject(this.orbText, 0, 0);
             this.orbText.setOffset(270, 185);
-        }  
+        }
     }
     
     private int life = 5;

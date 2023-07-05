@@ -105,6 +105,10 @@ public class Lvl3 extends Level
         addObject(block, 996, 828);
         block = new Block(1992, 24);
         addObject(block, 996, 948);
+        block = new Block(24, 24);
+        addObject(block, 1908, 252);
+        
+        
         Obstacle peak = new Obstacle();
         addObject(peak, 732, 60);
         peak = new Obstacle();
@@ -283,8 +287,7 @@ public class Lvl3 extends Level
         addObject(peak, 1860, 252);
         peak = new Obstacle();
         addObject(peak, 1884, 252);
-        peak = new Obstacle();
-        addObject(peak, 1908, 252);
+        
         peak = new Obstacle();
         addObject(peak, 492, 468);
         peak = new Obstacle();
@@ -306,11 +309,15 @@ public class Lvl3 extends Level
         peak = new Obstacle();
         addObject(peak, 684, 516);
         peak = new Obstacle();
+        addObject(peak, 660, 516);
+        peak = new Obstacle();
         addObject(peak, 708, 516);
         peak = new Obstacle();
         addObject(peak, 732, 516);
         peak = new Obstacle();
         addObject(peak, 756, 516);
+        peak = new Obstacle();
+        addObject(peak, 1116, 516);
         peak = new Obstacle();
         addObject(peak, 1140, 516);
         peak = new Obstacle();

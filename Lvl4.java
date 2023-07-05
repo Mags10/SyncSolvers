@@ -11,7 +11,7 @@ public class Lvl4 extends Level
     private GreenfootSound music;
     public Lvl4(int d)
     {
-        super(2000, 1200, 1, new GreenfootImage("Map005.png"), d);
+        super(2000, 1200, 2, new GreenfootImage("Map005.png"), d);
         prepare();
         music = new GreenfootSound("Asgore.mp3");
         music.setVolume(18);
@@ -19,7 +19,7 @@ public class Lvl4 extends Level
     }
     public Lvl4()
     {
-        super(2000, 1200, 1, new GreenfootImage("Map005.png"), 1);
+        super(2000, 1200, 2, new GreenfootImage("Map005.png"), 1);
         prepare();
         music = new GreenfootSound("Asgore.mp3");
         music.setVolume(18);
@@ -215,6 +215,8 @@ public class Lvl4 extends Level
         block = new Block(1992, 24);
         addObject(block, 996, 1164);
         Obstacle peak = new Obstacle();
+        addObject(peak, 84, 228);
+        peak = new Obstacle();
         addObject(peak, 108, 228);
         peak = new Obstacle();
         addObject(peak, 60, 348);
